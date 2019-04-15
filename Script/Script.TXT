@@ -1,0 +1,195 @@
+;*************************************************
+;
+; The Dark Renaissance
+;
+;*************************************************
+
+;-------------------------------------------------
+; Platform Definitions
+;-------------------------------------------------
+
+[PSXExtensions]
+Level=	.PSX
+Cut=		.CUT
+FMV=		.FMV
+
+[PCExtensions]
+Level=	.TR4
+Cut=		.TR4
+FMV=		.BIK
+
+;-------------------------------------------------
+; Language Filenames
+;-------------------------------------------------
+
+[Language]
+File=		0,English.TXT
+
+;-------------------------------------------------
+; Options
+;-------------------------------------------------
+
+[Options]
+Plugin=	6, Plugin_SlopeFix, IGNORE
+Plugin=	5, Plugin_CeilingClimbing, IGNORE
+Plugin=	4, Plugin_ClassicInventory, IGNORE
+Plugin=	3, Plugin_ChocolateFanFlareSFX, IGNORE
+Plugin=	2, Plugin_Renaissance, IGNORE
+Plugin=	1, Plugin_AkyVMix01, IGNORE
+LoadSave=		ENABLED
+Title=		ENABLED
+PlayAnyLevel=	ENABLED
+InputTimeout=	18000													;Frames * Seconds = 60x30
+FlyCheat=		ENABLED
+Security=		$55
+DemoDisc=		DISABLED
+LoadSave=		DISABLED
+CRS=			ENABLED
+WorldFarView=	127
+
+;-------------------------------------------------
+; Diagnostic
+;-------------------------------------------------
+
+Diagnostic=		ENABLED
+
+; -- Shows only cheat codes --
+;DiagnosticType=	DGX_LARA + DGX_ANIMATION + DGX_CHEATS, EDGX_SLOW_MOTION+EDGX_SWAP_VIEW	; Shows only information about Lara
+DiagnosticType=	DGX_SFX_SOUNDS+DGX_CHEATS, IGNORE								; Shows only information about sounds
+
+; -- Shows Lara info and BREAKABLE WALL info --
+;DiagnosticType=	DGX_LARA + DGX_ANIMATION, IGNORE
+;LogItem=		FLI_SHOW_DIFFERENCES, 62	; on land
+;LogItem=		FLI_SHOW_DIFFERENCES, 63	; underwater
+
+; -- Shows Lara info and PICKABLE STATUE info --
+;DiagnosticType=	DGX_LARA + DGX_ANIMATION, IGNORE
+;LogItem=		FLI_SHOW_DIFFERENCES, 129	; STATUE 1 (yellow-lit square)
+
+; -- Shows Lara info and VON CROY info --
+;DiagnosticType=	DGX_LARA + DGX_ANIMATION, IGNORE
+;LogItem=		FLI_SHOW_DIFFERENCES, 110	; VON CROY
+;LogItem=		FLI_SHOW_DIFFERENCES, 113	; AI_FOLLOW with OCB 3 and codebit [--3--]
+
+
+;-------------------------------------------------
+; Title
+;-------------------------------------------------
+
+[Title]
+LoadCamera=	84246, -533, 78233, 81622, -1514, 78208, 40					;Src x,y,z target x,y,z, room
+Level=		DATA\TITLE, 025
+
+ColorRGB=		1, 40, 140, 150
+ColorRGB=		2, 20, 70, 75
+
+Customize= CUST_BACKGROUND, BKGDT_INVENTORY, BKGDF_KEEP_GAME_SCREEN, IGNORE, IGNORE
+Customize= CUST_BACKGROUND, BKGDT_LOADING_LEVEL, BKGDF_HIDE_LOADING_BAR, IGNORE, IGNORE
+Customize= CUST_BACKGROUND, BKGDT_LASER_SIGHT, BKGDF_HIDE_SPRITE_LASER_SIGHT, IGNORE, IGNORE
+
+Customize=		CUST_BAR, BAR_LOAD_LEVEL, IGNORE, 5000, IGNORE, IGNORE, IGNORE, 1, 2, IGNORE
+
+Customize=		CUST_SET_TEXT_COLOR, TT_MAIN_MENU_ON, CL_BLINKING_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_LEVEL_NAME_ON, CL_BLINKING_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_DESCRIPTION_ON, CL_BLINKING_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_SELECT_LEVEL, CL_METAL
+Customize=		CUST_SET_TEXT_COLOR, TT_ACTION_INVENTORY_MENU_ON, CL_BLINKING_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_PAUSED_MENU_TITLE, CL_METAL
+Customize=		CUST_SET_TEXT_COLOR, TT_ITEM_NAME, CL_METAL
+Customize=		CUST_SET_TEXT_COLOR, TT_PAUSED_MENU_ITEMS, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_ACTION_INVENTORY_MENU_OFF, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_AMMO, CL_METAL
+Customize=		CUST_SET_TEXT_COLOR, TT_CREDITS, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_LEVEL_NAME_OFF, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_MAIN_MENU_OFF, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_NEW_LEVEL_ARROWS, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_OPTION_DESCRIPTIONS, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_OPTION_VALUES, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_DESCRIPTION_OFF, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_PANEL_TITLE, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_STATISTICS_DESCRIPTIONS, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_STATISTICS_VALUES, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_CAMERA_VIEW, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE1_BOTTOM, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE1_TOP, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE3, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_LEGEND, CL_WHITE
+Customize=		CUST_SET_TEXT_COLOR, TT_SCREEN_TIMER, CL_WHITE
+
+Parameters=	PARAM_ROTATE_ITEM, 2, FROT_LOOP, 0, IGNORE, IGNORE, IGNORE, ROTV_BACKWARD, IGNORE, $10, IGNORE, IGNORE
+Parameters=	PARAM_ROTATE_ITEM, 1, FROT_LOOP, 2, IGNORE, IGNORE, IGNORE, ROTV_FORWARD, IGNORE, $10, IGNORE, IGNORE
+;Parameters=	PARAM_ROTATE_ITEM, 1, FROT_LOOP, 0, ROTH_CLOCKWISE, IGNORE, $4, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
+Triggergroup=	1, $2000, 173, $1, $2000, 173, $2, $2000, 357, $2, $5000, 5, $F42
+GlobalTrigger=	1, FGT_SINGLE_SHOT, GT_TITLE_SCREEN, TSCR_MAIN_TITLES, -1, 1, 1
+
+
+;-------------------------------------------------
+; Levels
+;-------------------------------------------------
+
+[Level]		;TECH DEMO - LARA
+Name=			Demo - Lara
+Horizon=		ENABLED
+LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
+Level=		DATA\demo,031
+;TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B	 ; What's that?
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Lara.txt"
+#INCLUDE "WIP_stuff.txt"
+#INCLUDE "PickableStatues.txt"
+#INCLUDE "Inventory.txt"
+Customize=		CUST_HAIR_TYPE, HAIR_ONE_TR5_PONYTAIL
+
+;[Level]		;TECH DEMO - KURTIS
+;Name=			Demo - Kurtis
+;Horizon=		ENABLED
+;LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
+;Level=		DATA\kurtis,031
+;TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B	 ; What's that?
+;#INCLUDE "General_LevelSetting.txt"
+;#INCLUDE "_Animations_Kurtis.txt"
+;#INCLUDE "WIP_stuff_VC_Lara.txt"
+;#INCLUDE "Inventory.txt"
+;Customize=		CUST_HAIR_TYPE, HAIR_PAGE_BOY
+
+[Level]		;CASTLE KRIEGLER
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Lara.txt"
+#INCLUDE "Inventory.txt"
+#INCLUDE "1-kriegler.txt"
+Customize= CUST_CINV_DEBUG, ENABLED
+
+[Level]		;THE LINE OF DESCENT
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Lara.txt"
+#INCLUDE "Inventory.txt"
+#INCLUDE "Descent.txt"
+
+Customize= CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
+Parameters=    PARAM_MOVE_ITEM, 1, FMOV_INFINITE_LOOP, 51, DIR_NORTH, 512, 20, -1, -1, -1
+Parameters= PARAM_ROTATE_ITEM, 1, FROT_LOOP, 51, ROTH_CLOCKWISE, -1, 512, ROTV_NONE, -1, -1, -1, -1
+
+
+[Level]		;THE SUNKEN CITY OF CENNET
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Kurtis.txt"
+#INCLUDE "Inventory.txt"
+#INCLUDE "Cennet.txt"
+
+;[Level]		;THE ZENOATH
+;#INCLUDE "5-zenoath.txt"
+
+[Level]		;THE LOST VALLEY
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Lara.txt"
+#INCLUDE "Inventory.txt"
+#INCLUDE "6-valley.txt"
+Customize=		CUST_CAMERA, FCAM_INVISIBLE_LARA_ON_LOOK_CAM, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
+
+;[Level]		;TIBET
+;#INCLUDE "7-tibet.txt"
+
+;[Level]		;ZEONATH - EGYPT
+;#INCLUDE "8-egypt.txt"
+;#INCLUDE "Darkness.txt"
+;#INCLUDE "Inventory.txt"

@@ -1,0 +1,23 @@
+
+<FORMAT>
+#TITLE#=Introduction
+<END_FORMAT>
+Since my last adventure, I have learned some new techniques. Do you want to see them? 
+#END_PAGE#
+
+
+<FORMAT>
+#TITLE#=Camera Modes
+<END_FORMAT>
+
+Lost the orientation on the journey? Don't worry. The new camera modes will help you!
+You can press the F9 , F10,  F11 and F12 keys to toggle the camera mode and F8 to reset it.
+#END_PAGE#
+
+<FORMAT>
+#TITLE#=Quick save
+<END_FORMAT>
+
+In some situations you just have no time to go to your inventory to save or load the game.
+Now you can press F5 to quicksave and F6 to quickload the game.
+You can still access the regular save and load menu from my diary.

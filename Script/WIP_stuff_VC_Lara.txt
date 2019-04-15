@@ -1,0 +1,148 @@
+
+#DEFINE LARA_ID 	110		; This is Lara's item ID (yellow tooltip)
+
+; ---- How it works ----
+; Basically, what we have to know is that the CUSTOM_D field of a VON_CROY/GUIDE/ENEMY_JEEP's item memory holds the OCB of the AI_FOLLOW object it
+; is trying to reach. For example, if that VON_CROY's CUSTOM_D field value is 234, then our VON_CROY is heading to the AI_FOLLOW object with OCB 234.
+; 
+; By default, each time VON_CROY reaches an AI_FOLLOW object, its CUSTOM_D value changes to the next available AI_FOLLOW. And he will actually get
+; there once we call F30.
+;
+; So when we change the CUSTOM_D field value of VON_CROY to another value, he should head to the AI_FOLLOW which has this value as OCB.
+;
+; Of course, this is TRLE and this isn't perfect. It seems Von Croy actually has another field, because there is probably the "final goal",
+; AND the "current goal" as well, not only one of them.
+; "Final goal" would define where he's trying to go, his final destination.
+; "Current goal" would define where he's trying to go right now in order to reach that "final goal".
+; For example: if he's at an AI_FOLLOW with OCB 5, but there is a trigger for OCB 10. His normal behaviour is to go reach all AI_FOLLOWs between
+; the one he's at and the one he's going to (here, he has to go to OCB 6, then OCB 7, 8, 9, and finally, 10).
+; His final goal is OCB 10, but his current goal will be OCB 6, until he reaches OCB 6. Then, he current goal will be OCB 7, and his next goal will
+; still be 10. Etc.
+;
+; Thing is, we don't know where which value that CUSTOM_D field corresponds to (is it the final goal or the current goal?), and we don't have easy
+; access to the second field in vanilla TRNG.
+;
+; This is only theory, but seems plausible.
+
+
+; ---- Useful triggers ----
+; $2000, 30, $5			; F30: Make Von Croy go to to AI_FOLLOW with OCB 5
+; $2000, 30, $A			; F30: Make Von Croy go to to AI_FOLLOW with OCB 10
+; $2000, 232, $540		; F232: Set in LBA1 value 5
+; $2000, 232, $A40		; F232: Set in LBA1 value 10
+; $5000, 110, $36		; A54: Set the index of Lara as Selected Item
+; $2000, 256, $1841		; F256: Copy value from Selected Item's CUSTOM_D field to LBA2
+; $2000, 257, $1840		; F257: Copy value from LBA1 to Selected Item's CUSTOM_D field
+
+; ---- Used variables ----
+; LBA1 (Local Byte Alfa 1) - To store the OCB value before setting it in the CUSTOM_D field
+; LBA2 (Local Byte Alfa 2) - ONLY FOR DEBUGGING - To display the current CUSTOM_D value
+
+
+
+
+; --- Will display on the screen the CUSTOM_D value (to know where Lara is going)
+GlobalTrigger=	234, IGNORE, GT_ALWAYS, IGNORE, IGNORE, 234, IGNORE
+TriggerGroup=	234,	>
+				$5000, 110, $36, >	; Set the index of Lara as Selected Item
+				$2000, 256, $1841, >	; Copy value from Selected Item's CUSTOM_D field to LBA1
+				>
+				$2000, 67, $20, >	; Text. Erase all strings showed with Print String effect
+				$2000, 66, $205, >	; Set <Metal>color and (Top line, central alignment)position for next Print String flipeffect
+				$2000, 65, $C		; Text. Print Standard <"Custom_D is #0041">string on screen for (Forever) seconds
+
+
+
+
+
+
+; DEBUGGING - Use Numpad keys to test OCBs from 1 to 9 (0 is kept for Look key, and it's the first OCB anyway so it's useless)
+
+;#DEFINE NUM_0		82
+#DEFINE NUM_1		79
+#DEFINE NUM_2		80
+#DEFINE NUM_3		81
+#DEFINE NUM_4		75
+#DEFINE NUM_5		76
+#DEFINE NUM_6		77
+#DEFINE NUM_7		71
+#DEFINE NUM_8		72
+#DEFINE NUM_9		73
+#DEFINE NUM_PLUS		78
+
+
+; Used triggers:      - Flash screen      - Set LBA1 value    - Copy to Custom_D   - Call F30
+GlobalTrigger=	501, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_1, IGNORE, 501, IGNORE
+TriggerGroup=	501, $2000, 355, $A08,   $2000, 232, $140,   $2000, 257, $1840;,   $2000, 30, $1		; Set in LBA1 value 1
+
+GlobalTrigger=	502, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_2, IGNORE, 502, IGNORE
+TriggerGroup=	502, $2000, 355, $A08,   $2000, 232, $240,   $2000, 257, $1840;,   $2000, 30, $2		; Set in LBA1 value 2
+
+GlobalTrigger=	503, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_3, IGNORE, 503, IGNORE
+TriggerGroup=	503, $2000, 355, $A08,   $2000, 232, $340,   $2000, 257, $1840;,   $2000, 30, $3		; Set in LBA1 value 3
+
+GlobalTrigger=	504, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_4, IGNORE, 504, IGNORE
+TriggerGroup=	504, $2000, 355, $A08,   $2000, 232, $440,   $2000, 257, $1840;,   $2000, 30, $4		; Set in LBA1 value 4
+
+GlobalTrigger=	505, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_5, IGNORE, 505, IGNORE
+TriggerGroup=	505, $2000, 355, $A08,   $2000, 232, $540,   $2000, 257, $1840;,   $2000, 30, $5		; Set in LBA1 value 5
+
+GlobalTrigger=	506, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_6, IGNORE, 506, IGNORE
+TriggerGroup=	506, $2000, 355, $A08,   $2000, 232, $640,   $2000, 257, $1840;,   $2000, 30, $6		; Set in LBA1 value 6
+
+GlobalTrigger=	507, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_7, IGNORE, 507, IGNORE
+TriggerGroup=	507, $2000, 355, $A08,   $2000, 232, $740,   $2000, 257, $1840;,   $2000, 30, $7		; Set in LBA1 value 7
+
+GlobalTrigger=	508, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_8, IGNORE, 508, IGNORE
+TriggerGroup=	508, $2000, 355, $A08,   $2000, 232, $840,   $2000, 257, $1840;,   $2000, 30, $8		; Set in LBA1 value 8
+
+GlobalTrigger=	509, FGT_SINGLE_SHOT_RESUMED, GT_KEYBOARD_CODE, NUM_9, IGNORE, 509, IGNORE
+TriggerGroup=	509, $2000, 355, $A08,   $2000, 232, $940,   $2000, 257, $1840;,   $2000, 30, $9		; Set in LBA1 value 9
+
+
+
+
+;============================================================================
+; Having Kurtis help Lara jump to a higher spot
+;============================================================================
+#DEFINE ANIM_KURTIS_LIFT_LARA		431		; 431 is (of course) a temporary animation (taken because neutral StateID 89 and leads to stance)
+#DEFINE ANIM_VC_LARA_LIFTED_BY_KURTIS	 40		; 40 is (of course) a temporary animation (taken because stance StateID 1 and leads to stance)
+#DEFINE AI_FOLLOW_LIFTING_POINT		113		; 113 is the ID of the AI_FOLLOW object where Kurtis will lift Lara. It has OCB codebit 3, so Lara will face the cone's direction.
+
+; Voodoo for the required position and orientation for Kurtis around Lara
+#DEFINE X_min 0-512
+#DEFINE X_max 0+512
+#DEFINE Y_min 0-512
+#DEFINE Y_max 0+512
+#DEFINE Z_min 0-512
+#DEFINE Z_max 0+512
+
+#DEFINE H_min 0-4096
+#DEFINE H_max 0+4096
+#DEFINE V_min 0-4096
+#DEFINE V_max 0+4096
+#DEFINE R_min 0-4096
+#DEFINE R_max 0+4096
+
+; Make Kurtis play the lifting animation
+Animation=		431, KEY1_ACTION, IGNORE, FAN_ALIGN_TO_ENV_POS, ENV_MULT_CONDITION, 550, IGNORE, STATE_STOP
+;Animation=		-431, IGNORE, IGNORE, IGNORE, ENV_MULT_CONDITION, 550, IGNORE, STATE_STOP
+MultEnvCondition=	550,	ENV_ITEM_TEST_POSITION, 550, IGNORE;, >
+					;ENV_ITEM_EXTRA_IN_FRONT, AI_FOLLOW_LIFTING_POINT, 256
+
+TestPosition=	550, TPOS_ROUND_HORIENT, VON_CROY, >
+				X_min, X_max,    Y_min, Y_max,    Z_min, Z_max, >
+				H_min, H_max,    V_min, V_max,    R_min, R_max
+
+; Trigger Lara's jump animation when Kurtis plays the lifting animation
+Animation=		550, IGNORE, IGNORE, FAN_PERFORM_TRIGGER_GROUP, IGNORE, IGNORE, IGNORE, -431
+TriggerGroup=	550,		$2000, 355, $1404, >		; *FLASH GREEN*
+					$5000, LARA_ID, $511		; Force animation 69 (lifted by Kurtis) animation for VC Lara
+
+
+
+
+
+
+
+
