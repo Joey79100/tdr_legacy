@@ -12,6 +12,6 @@ newmtl 01___Default
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Biblioteka\Desktop\forest_grass\swordfern.tga
-	map_Kd D:\Biblioteka\Desktop\forest_grass\swordfern.tga
-	map_d D:\Biblioteka\Desktop\forest_grass\swordfern_a.png
+	map_Ka swordfern.tga
+	map_Kd swordfern.tga
+	map_d swordfern_a.png

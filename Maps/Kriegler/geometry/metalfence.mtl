@@ -12,5 +12,5 @@ newmtl tile0
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Biblioteka\Google Drive\TLD\NGLE\maps\1-kriegler\geometry\metalfence1.tga
-	map_Kd D:\Biblioteka\Google Drive\TLD\NGLE\maps\1-kriegler\geometry\metalfence1.tga
+	map_Ka metalfence1.tga
+	map_Kd metalfence1.tga

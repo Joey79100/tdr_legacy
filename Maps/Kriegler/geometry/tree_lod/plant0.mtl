@@ -36,5 +36,5 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Biblioteka\Desktop\plant0.png
-	map_Kd D:\Biblioteka\Desktop\plant0.png
+	map_Ka plant0.png
+	map_Kd plant0.png

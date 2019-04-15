@@ -12,9 +12,9 @@ newmtl 01___Default
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\Biblioteka\Desktop\forest_grass\swordfern.png
-	map_Kd D:\Biblioteka\Desktop\forest_grass\swordfern.png
-	map_d D:\Biblioteka\Desktop\forest_grass\swordfern_a.png
+	map_Ka swordfern.png
+	map_Kd swordfern.png
+	map_d swordfern_a.png
 
 newmtl wire_154215229
 	Ns 32

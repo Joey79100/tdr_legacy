@@ -12,5 +12,5 @@ newmtl default
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Google_Drive\TLD\NGLE\maps\1-kriegler\geometry\chapel_door1\chapel_door.tga
-	map_Kd C:\Google_Drive\TLD\NGLE\maps\1-kriegler\geometry\chapel_door1\chapel_door.tga
+	map_Ka chapel_door.tga
+	map_Kd chapel_door.tga

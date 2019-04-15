@@ -26,6 +26,6 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka C:\Google_Drive\TLD\NGLE\maps\1-kriegler\geometry\Lantern_of_the_Dead\lantern_wall.tga
-	map_Kd C:\Google_Drive\TLD\NGLE\maps\1-kriegler\geometry\Lantern_of_the_Dead\lantern_wall.tga
-	map_d C:\Google_Drive\TLD\NGLE\maps\1-kriegler\geometry\Lantern_of_the_Dead\lantern_wall.tga
+	map_Ka lantern_wall.tga
+	map_Kd lantern_wall.tga
+	map_d lantern_wall.tga
