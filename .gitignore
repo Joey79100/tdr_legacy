@@ -1,0 +1,14 @@
+
+*.log
+Plugin_AkyVMix01_warm_up_log.txt
+Plugin_CeilingClimbing_warm_up_log.txt
+Plugin_ChocolateFanFlareSFX_warm_up_log.txt
+Plugin_ClassicInventory_warm_up_log.txt
+Plugin_Renaissance_warm_up_log.txt
+Plugin_SlopeFix_warm_up_log.txt
+Tomb_NextGeneration_warm_up_log.txt
+LastExtraction.lst
+D3D9.dll
+D3DImm.dll
+DDraw.dll
+DXGI.dll
