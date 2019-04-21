@@ -13,3 +13,6 @@ D3DImm.dll
 DDraw.dll
 DXGI.dll
 shot***.bmp
+*.mem
+LastExtraction.lst
+Last_Crash_*.txt
