@@ -1,0 +1,84 @@
+Version=1.3.0.7
+Date: 15 April 2019  (22:36:23)  Size=2760704 bytes
+CRS=Enabled
+Last diagnostic mexage:DXMove : x %d y %d
+Last directX error: One or more of the parameters passed to the method are incorrect. 
+DIRECTX_STACK:
+ESP=0x19F480
+STACK_TRACE:
+	0x100D3C41
+	0x490CAF
+	0x490CAF
+	0x48F8AE
+	0x490CAF
+	0x10065523
+	0x100C43C2
+	0x48FD7E
+	0x1013E92B
+	0x10065523
+	0x100C43C2
+	0x48F904
+	0x48C8A0
+	0x49F26B
+	0x44004E
+	0x420047
+<CRASH DURING STACK TRACE>
+END_STACK_TRACE
+
+
+MEMORY CODE MAPPING:
+
+BASE     START    END       ID   PluginName             (PluginVersion - TrngVersion)
+--------------------------------------------------------------------------------------
+10000000 10001000 1014A000   0   Tomb_NextGeneration    (1.3.0.7 - 1.3.0.7)
+0FCB0000 0FCB1000 0FCCF200   1   Plugin_AkyVMix01       (1.0.0.0 - 1.3.0.7)
+56530000 56531000 56538C00   2   Plugin_CeilingClimbing (0.9.6.0 - 1.3.0.7)
+5C220000 5C221000 5C225A00   3   Plugin_ChocolateFanFlareSFX (1.0.0.1 - 1.3.0.7)
+05970000 05971000 059CB800   4   Plugin_ClassicInventory (1.0.0.0 - 1.3.0.7)
+54CF0000 54CF1000 54CF7E00   5   Plugin_Renaissance     (0.0.0.3 - 1.3.0.7)
+52FE0000 52FE1000 52FE7600   6   Plugin_SlopeFix        (0.9.4.5 - 1.3.0.7)
+--------------------------------------------------------------------------------------
+............... QUICK DIAGNOSTIC LOG ...............
+At moment of crash the program was managing:
+....................................................
+CRASH REASON: EXCEPTION_ACCESS_VIOLATION
+	The thread tried to read from or write to a virtual address for which it does not have the appropriate access.
+EXTRA_INFO: VIOLATION ON READ AT OFFSET 0xFB10008
+RECOVERABLE : YES
+CRASH OFFSET: 0x5EBCA227  (Outside of all tomb4, trng or plugin engines. Probably windows APIs)
+REGISTERS:
+	EAX=0  
+	EBX=1  
+	ECX=FB0FB38  
+	EDX=0  
+	ESI=FB0FFC4  
+	EDI=10  
+	EBP=19FD58  
+	EIP=5EBCA227
+	ESP=19FCF8
+WARNING: The crash happened before loading Lara item, or Lara item was not present in the level map
+
+Stack=0x19FCF8  pContesto=0x19F818  pInfoEccezione=0x19F7C8
+PRIMARY_STACK:
+ESP=0x19FCF8
+STACK_TRACE:
+	0x491E47
+	0x48CA24
+	0x49F26B
+	0x44004E
+	0x420047
+<CRASH DURING STACK TRACE>
+END_STACK_TRACE
+
+SECONDARY_STACK:
+ESP=0x90904270
+STACK_TRACE:
+<CRASH DURING STACK TRACE>
+END_STACK_TRACE
+
+OTHER_STACK:
+ESP=0x90904270
+STACK_TRACE:
+<CRASH DURING STACK TRACE>
+END_STACK_TRACE
+
