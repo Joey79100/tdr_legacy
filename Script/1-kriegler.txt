@@ -1,6 +1,6 @@
 Name=			Castle Kriegler
 ;LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
-LoadCamera=	82861,-944,3556,82432,-592,4608,174
+LoadCamera=	83438,911,3463,82878,-594,4100,183
 Level=		DATA\kriegler,030
 
 Puzzle=		5,Torch,-1,-1,-1,-1,-1,-1

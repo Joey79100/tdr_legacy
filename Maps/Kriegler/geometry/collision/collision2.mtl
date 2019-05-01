@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 22.04.2019 09:01:12
+# File Created: 26.04.2019 23:16:49
 
 newmtl default
 	Ns 10.0000
@@ -12,5 +12,3 @@ newmtl default
 	Kd 0.5880 0.5880 0.5880
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka puzzle_item_2_combo.tga
-	map_Kd puzzle_item_2_combo.tga
