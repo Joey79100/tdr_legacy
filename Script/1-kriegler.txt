@@ -185,3 +185,11 @@ Triggergroup=	1016, $9000,10,$010E, $9000,11,$030E ; if Animating 2 of ID 10 is 
 Triggergroup=	1017, $5000,10,$002B, $2000,375,$03F3 ; trigger Animating 2 of ID 10 (wolf) and disable globaltrigger 1011
 Triggergroup=	1018, $2000,375,$03F3 ; disable globaltrigger 1011
 GlobalTrigger=	1011, FGT_DISABLED, GT_ALWAYS, 2, 1016, 1017, 1018
+
+;-----------------------------------------------------------------------------
+;DIGGING UP BONES
+;-----------------------------------------------------------------------------
+
+Triggergroup=	1019, $9000,138,$030E ;if animating PUZZLE HOLE 2 is active
+Triggergroup=	1020, $5000,143,$011F, $5000,138,$003D, $2000,375,$03F4 ; move TWOBLOCK PLATFORM ID 143, disable collision of PUZZLE HOLE 2 of ID 138 and disable globaltrigger 1012
+GlobalTrigger=	1012, -1, GT_ALWAYS, 2, 1019, 1020, -1
