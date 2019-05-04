@@ -190,6 +190,27 @@ GlobalTrigger=	1011, FGT_DISABLED, GT_ALWAYS, 2, 1016, 1017, 1018
 ;DIGGING UP BONES
 ;-----------------------------------------------------------------------------
 
-Triggergroup=	1019, $9000,138,$030E ;if animating PUZZLE HOLE 2 is active
-Triggergroup=	1020, $5000,143,$011F, $5000,138,$003D, $2000,375,$03F4 ; move TWOBLOCK PLATFORM ID 143, disable collision of PUZZLE HOLE 2 of ID 138 and disable globaltrigger 1012
+Parameters=	PARAM_MOVE_ITEM, 100, IGNORE, 143, DIR_DOWN, 768, 10, IGNORE, IGNORE, IGNORE	; move 143(twoblock) dir_down 768(3clicks) with speed 20
+Parameters=	PARAM_MOVE_ITEM, 101, IGNORE, 6, DIR_DOWN, 512, 10, IGNORE, IGNORE, IGNORE	; move 6(Lara) dir_down 512(2clicks) with speed 20
+Parameters=	PARAM_MOVE_ITEM, 102, IGNORE, 133, DIR_DOWN, 768, 10, IGNORE, IGNORE, IGNORE	; move 133(twoblock) dir_down 768(3clicks) with speed 20
+Parameters=	PARAM_MOVE_ITEM, 103, IGNORE, 144, DIR_DOWN, 768, 10, IGNORE, IGNORE, IGNORE	; move 144(twoblock) dir_down 768(3clicks) with speed 20
+
+Triggergroup=	1019, $9000,138,$0136, $8000,134,$001E ;if Lara is 1 click away from PUZZLE HOLE 2 (ID 138) and is performing animation 134
+Triggergroup=	1020, $2000,167,$0064, $2000,167,$0065, $5000,138,$003D, $2000,375,$03F4 ; move TWOBLOCK PLATFORM ID 143 using PARAMETER 100, disable collision of PUZZLE HOLE 2 of ID 138 and disable globaltrigger 1012
 GlobalTrigger=	1012, -1, GT_ALWAYS, 2, 1019, 1020, -1
+
+Triggergroup=	1021, $9000,146,$0136, $8000,134,$001E ;if Lara is 1 click away from PUZZLE HOLE 2 (ID 146) and is performing animation 134
+Triggergroup=	1022, $2000,167,$0066, $2000,167,$0065, $5000,146,$003D, $2000,375,$03F5 ; move TWOBLOCK PLATFORM ID 133 using PARAMETER 102, disable collision of PUZZLE HOLE 2 (ID 146) and disable globaltrigger 1013
+GlobalTrigger=	1013, -1, GT_ALWAYS, 2, 1021, 1022, -1
+
+Triggergroup=	1023, $9000,145,$0136, $8000,134,$001E ;if Lara is 1 click away from PUZZLE HOLE 2 (ID 145) and is performing animation 134
+Triggergroup=	1024, $2000,167,$0067, $2000,167,$0065, $5000,145,$003D, $2000,375,$03F6 ; move TWOBLOCK PLATFORM ID 143 using PARAMETER 103, disable collision of PUZZLE HOLE 2 (ID 145) and disable globaltrigger 1014
+GlobalTrigger=	1014, -1, GT_ALWAYS, 2, 1023, 1024, -1
+
+Triggergroup=	1025, $8000,176,$0103 ;if Lara has PUZZLE ITEM 2
+Triggergroup=	1026, $2000,374,$03F8, $2000,375,$03F7; enable GLOBAL TRIGGER 1016, disable GLOBAL TRIGGER 1015
+GlobalTrigger=	1015, -1, GT_ALWAYS, 2, 1025, 1026, -1
+
+Triggergroup=	1027, $8000,232,$0001 ;if Lara doesn't have PUZZLE ITEM 2
+Triggergroup=	1028, $2000,50,$0101; add +1 PUZZLE ITEM 2
+GlobalTrigger=	1016, FGT_DISABLED, GT_ALWAYS, 2, 1027, 1028, -1
