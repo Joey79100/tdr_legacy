@@ -1,0 +1,10 @@
+#START_TAG#=_NEW Interact items
+I mean, items that Lara can interact with (kickdoor, switch etc.).
+OCB 1111: a technical value, you don't need to add manually (see: PARAM_ITEM_INTERACTION).
+
+#START_TAG#=_NEW Camera Target
+When you use a TARGET trigger without a CAMERA trigger (which I called a "standalone" TARGET trigger), "only" to draw Lara's attention to the target object, then you can use OCB numbers to fix some bugs (only for Camera Target objects).
+
+OCB 1: standalone TARGET triggers always work as if they had the "One Shot" button pushed. This OCB will remove this, you will be able to activate the TARGET trigger each time when Lara goes into the trigger zone.
+OCB 2: if you don't use OCB 1, then it definitely seems buggy that when you save/load the game, then the TARGET trigger (already used) will become useable again (once more) automatically. This OCB will disable this, loading a game won't enable the trigger.
+OCB 4: a technical value, you don't need to add manually.

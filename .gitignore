@@ -21,3 +21,7 @@ Maps\Kriegler\backup
 *kriegler[0-9]*.prj2
 *kriegler.prj2
 backgame.*
+log_tom2pc.txt
+autosave.prj
+NG_Settings.bin
+NG_Tom2Pc_Last_Log.txt

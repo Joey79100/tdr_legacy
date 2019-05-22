@@ -1,0 +1,295 @@
+Plugin version is 1.0.0.0.
+Useable TRNG is 1.3.0.7 or higher.
+
+Other plugins needed: none.
+
+This plugin contains several new executable triggers and condition triggers, for different features.
+
+Notes:
+
+- Several new things in this plugin is also available with easier or complex triggering and scripting, in variable and memory zone based setups, using only trng.dll.
+However, any variable mentioned there, are NOT used in these new triggers. This plugin is variable-free for level builders!
+- Several triggers hosting Moveable objects are not Action triggers but Flipeffects. Believe me, I had a good reason to do that, this is not a bug or an error, triggers like that work properly only this way.
+- Possible (probably unfixable) bugs are mentioned in the descriptions. (See NG Center/Reference or NGLE/Set Trigger Type/Trigger's Remark.)
+- Many triggers (controlling objects) of this plugin has a limitation: only one or a few objects can be used with that feature at the same time. I did that limitation because they need some extra memory:
+
+a, It is a continuous feature, we need to execute it again and again, or else the effect will be lost. Or
+b, New savegame data is needed for this feature.
+
+And I created that extra memory only for one/a few numbers of objects.
+- It seems the best or sometimes the only way to use some condition triggers is if you use them as GlobalTrigger conditions, not placing them in the map. (But maybe you will be more lucky than me when you test them in the map, that is why they are not only GlobalTrigger conditions.)
+
+-----------------------------------------------------------------------------------------------
+Automatical bug fixes:
+
+- Bug description: the Seth Blade trap will be reactivated when a savegame has been loaded.
+
+Note:
+This fix works only if the OCB is negative. (Because it is meaningless with a positive OCB.)
+I mean, it is not really known, but Seth Blades are working not only with negative OCB numbers, but positive OCB numbers as well:
+
+a, As you know, a negative OCB number means the trap will start moving in a time which is defined in the OCB number (as tick frames), and, after that, the trap won't move any more.
+b, A positive OCB number means the trap will start moving in a time which is defined in the OCB number (as tick frames), and, after that, the trap will start moving again (according to that time).
+
+An antitrigger means a pause in both cases.
+
+- Bug description: the Drive/Reverse and speedcounter sprites are enabled even if Lara is not in the jeep.
+
+Note:
+Yes, the jeep also has a (useable!) speedcounter sprite if there also is a motorbike in the WAD.
+
+..................
+OCB list:
+
+_NEW Interact items: 1111 (only technical OCB)
+_NEW Camera Target: 1, 2, 4 (fixing "standalone camera target" bugs)
+
+..................
+Customize command list:
+
+CUST_START_WEAPON
+
+..................
+ACTION trigger list:
+
+150:Enemy. Force GUARD property on <#> enemy
+151:Enemy. Make <#> enemy drop GUARD (AI nullmesh or forced), MODIFY, GUARD+MODIFY, PATROL properties
+152:Enemy. Put out the flaming torch temporarily in <#> Guide's hand
+153:Enemy. Make <#> Horseman (on horse) patrol
+
+..................
+FLIPEFFECT trigger list:
+
+500:Inventory-Item. Set infinite amount for <&> inventory-item
+501:Inventory-Item. Set (E) big number of <&> inventory-item
+502:Inventory-Item. Increase the number of <&> inventory-item with (E) big number
+503:Inventory-Item. Decrease the number of <&> inventory-item with (E) big number
+504:Lara. (Weapons) Attach lasersight on <&> weapon
+505:Lara. (Weapons) Detach lasersight from <&> weapon
+506:Lara. (Weapons) Load <&> ammo in the shotgun
+507:Lara. (Weapons) Load <&> ammo in the grenade gun
+508:Lara. (Weapons) Load <&> ammo in the crossbow
+509:Lara. (Weapons) Make Lara extract <&> weapon immediately
+510:Lara. (Holds) Make the flare go dead in Lara’s hand in <&> seconds from now on 
+511:Timer. <&> Enable/disable screen timer
+512:Timer. Start countdown screen timer from <&> second
+513:Timer. Use partial time in screen timer in <&> way
+514:Lara. (Health) Set Lara's actual air under water to <&> percents
+515:Lara. (Health) Set Lara's maximum air under water to <&> (set it only out of underwater, except: from default)
+516:Lara. (Health) Keep Lara's actual underwater air (as actual air in scuba diver tank) out of water, in <&> way (No deep wading!)
+517:Timer. Restore the time of running screen timer after the level jump in <&> way
+518:Lara. (Move) <&> Enable/disable infinite dash power (for foot and nitro+motorbike)
+519:Cheat. <&> Enable/disable to start flycheat (Restore the original status before leveljump!)
+520:Weather. Horizon. <&> Enable/disable horizon
+521:Weather. Horizon. <&> Enable/disable ColAddHorizon
+522:Weather. Sun. <&> Enable/disable LensFlare coordinates and color
+523:Weather. Sun. The sun has <&> LensFlare coordinates and color
+524:Weather. Sun. Move the sun in <E> direction in <&> way
+525:Weather. Sun. Change slowly the color of the sun to <&> color in (E) seconds
+526:Weather. Sun. (E) Start/stop pulsing of sun in <&> way, between the original color and the required one
+527:Weather. Sky. (E) Start/stop pulsing of layer1 in <&> way, between the original color and the required one
+528:Camera. Change LoadCamera parameters in <&> way
+529:Lara. (Move) Make all the walls climbable in <&> way (Cannot climbing around corners!)
+530:Weather. Sky. (E) Start/stop pulsing of layer2 in <&> way, between the original color and the required one
+531:Weather. Sun. Move the sun in more than one direction at the same time, in <&> way
+532:Lara. (Holds) Make Lara get out of/off the actual vehicle in <&> way (if it is sudden: only for jeep or motorbike)
+533:Lara. (Holds) Make Lara get in/on jeep or motorbike in <&> way (just after leveljump/cutscene end)
+534:Lara. (Holds) (E) Enable/disable to use <&> item
+535:Enemy. Set the new location whereto <&> Ahmet will be transported when resetting Scales the next time
+536:Lara. (Holds) (E) Start/stop counting the amount of use of <&> switch from now on (to on: one use, to off: another use)
+537:Sound. Change (E) audio/sound master volume (of Options menu) to <&> percent
+538:Earthquake. (E) Start/stop an earthquake with <&> parameters
+539:Moveable. Change the look of <&> the object slot for its MIP slot, in bigger distance from Lara than the required one
+540:Lara. (Health) Start/stop making Lara invulnerable against the direct (sword, bite etc.) attack of <&> enemy
+541:Enemy. Change the vitality of <&> enemy to the required point
+542:Enemy. Start/stop making <&> enemy invulnerable (remaining aimable)
+543:Enemy. Start/stop making <&> enemy poisoned
+544:Enemy. Set <&> Enemy Jeep speed to the required value
+545:Enemy. Set the time between <&> Enemy Jeep (parked) shoots two grenades to the required seconds
+546:Enemy. Shoot the next grenade of <&> Enemy Jeep (parked) in the required seconds (then follow the usual timer between grenades)
+547:Enemy. Make <&> Enemy Jeep friendly (= disable grenades), or remove it
+548:Enemy. Set the ammo amount of <&> Baddy_1 or Baddy_2 to the required bullets
+549:Enemy. Customize the "burn Lara" and "vulnerability" status of <&> Wraith1 (the fire wraith)
+550:Enemy. Start/stop making <&> Wraith2 (the ice wraith) invulnerable in water
+551:Enemy. Start/stop making <&> Wraith have a special route
+552:Enemy. Set the required emission mode for <&> Little Beetles (only when coming from walls)
+553:Enemy. Set the time between <&> emitter emits two fishes to the required seconds
+554:Enemy. Start/stop <&> Mutant performing the harmless rage for the required time
+555:Moveable. Customize <&> Falling Block time to shiver before the crash
+556:Object generally. Change the OCB value of Moveable or Statics object in <&> way
+557:Enemy. Force the required status on <&> Laser Head
+558:Trap. Force the required speed/direction on <&> Rollingball
+559:Trap. Force the required tick frames of pause between two extensions of <&> Teeth Spike
+560:Trap. Force the required rotation speed for <&> Joby Spike
+561:Trap. Force the required actual length for <&> Joby Spike
+562:Trap. Force the required maximal length for <&> Joby Spike
+563:Trap. Make <&> Squishy Block2 fall down in the required seconds
+564:Effect. (E) Start/stop <&> customized Sprinkler
+565:Moveable. Start/stop forcing the required pulsing color on <&> object
+566:Effect. Make <&> Firerope burn for the required seconds
+567:Effect. Force the required status on <&> Burning Floor
+568:Effect. (E) Start/stop the required special action on <&> Flame Emitter (having flames blown)
+569:Effect. (E) Start/stop the required special action on <&> Steam Emitter (having harmful steam blown)
+570:Moveable. Make <#> Twoblock Platform descend to the required position
+571:Effect. Make <&> Mine (triggered) explode in the required seconds
+572:Effect. Make single <&> Grenade have the required time for the exploding effect
+573:Moveable. Reactivate <&> object in the required way
+574:Moveable. Modify the One Shot status of <&> object in the required way
+575:Moveable. Modify the codebit button status of <&> object in the required way
+576:Moveable. Make the required mesh of <&> object slot shatterable
+577:Statistics. Add one extra pack to the <&> medipack statistics
+578:Statistics. (E) Start/stop the custom phase of <&> statistical parameter
+579:Statistics. Write the actual value of (E) statistical parameter in <&> variable
+580:Inventory-Item. Make the mechanical scarab useable <&> times from now on
+581:Train. <&> Enable/disable Train
+582:ResetHUB. <&> Enable/disable ResetHUB for (E) level
+583:Camera. <&> Start/stop forcing "look" camera to keep the view
+584:Inventory-Item. Set <&> parameters for (E) inventory item
+
+..................
+CONDITION trigger list:
+
+116:Moveable. <#> object activates this HEAVY trigger
+117:Moveable. <#> object (including Lara) is performing the required animation and frame
+118:Moveable. The item found latest is <#> object
+119:ResetHUB. ResetHUB is <#> enabled/disabled
+120:Train. Train is <#> enabled/disabled
+121:Inventory-Item. The inventory has been closed latest at <#> item
+122:Inventory-Item. The mechanical scarab can be used <&> times
+123:Statistics. <#> Seconds of time have been taken so far in (E) the level/game
+124:Statistics. <#> Ammo have been used so far in (E) the level/game
+125:Statistics. <#> Secrets have been found so far in (E) the level/game
+126:Statistics. <#> Meters of distance have been travelled so far in (E) the level/game
+127:Statistics. <#> Big/small medipacks have been used so far in (E) the level/game
+128:Moveable. (E) Mesh of <#> object has been invisible/shattered
+129:Moveable. The required mesh of <#> object slot is shatterable
+130:Moveable. The codebit button status of <#> object is (E)
+131:Moveable. The One Shot status of <#> object is (E)
+132:Moveable. <#> Door (moved by a cog switch) is in (E) position
+133:Effect. Lightning just (E) strikes/doesn't strike into <#> Lightning Conductor
+134:Moveable. <#> Element Puzzle status is (E)
+135:Effect. Single <#> Grenade has the required seconds before the explosion effect ends
+136:Effect. <#> Mine (triggered) has the required seconds before the explosion
+137:Trap. <#> Sentry Gun radar status is (E)
+138:Moveable. <#> Expanding Platform actual size is the required percent of the maximum
+139:Moveable. <#> Raising Block actual size is the required percent of the maximum
+140:Moveable. <#> Twoblock Platform is in (E) position
+141:Effect. <#> Waterfall Mist (having random emission by OCB) just (E) has/doesn't have an emission
+142:Effect. <#> Steam Emitter (having harmful steam blown) has the required parameter value
+143:Effect. <#> Steam Emitter (having harmful steam blown) has (E) status
+144:Effect. <#> Flame Emitter (having flames blown) has the required parameter value
+145:Effect. <#> Flame Emitter (having flames blown) has (E) status
+146:Effect. <#> Burning Floor has (E) status
+147:Effect. <#> Firerope (just burning) starts crumbling in the required seconds
+148:Effect. <#> Firerope has (E) status
+149:Lara. (Health) Lara is <#> just burning or not
+150:Inventory. There are <#> number of (E) inventory-item
+151:Lara. (Health) Lara's actual underwater air is <#> percents in (E) way
+152:Lara. (Move) Lara is just dashing (on foot or nitro+motorbike) with <#> percents of dash value
+153:Lara. (Weapons) Shotgun has <#> inventory status
+154:Lara. (Weapons) Uzis have <#> inventory status
+155:Lara. (Weapons) Revolver has <#> inventory status
+156:Lara. (Weapons) Grenade gun has <#> inventory status
+157:Lara. (Weapons) Crossbow has <#> inventory status
+158:Lara. (Weapons) Lasersight has <#> inventory status
+159:Trap. <#> Sentry Gun shooting status is (E)
+160:Lara. (Weapons) Lara is just aiming at any enemy (in automatic way)
+161:Lara. (Weapons) Lara is just aiming at an enemy of <#> enemy slot (in automatic way)
+162:Lara. (Weapons) Lara is just aiming at <#> enemy (in automatic way)
+163:Lara. (Weapons) Lara is just looking through the lasersight on <#> weapon in (E) way
+164:Lara. (Weapons) Lara's actual weapon is <#> in (E) way
+165:Lara. (Weapons) The weapon has the exact holstered position of <#> parameter
+166:Lara. (Weapons) The weapon seen on Lara's back is <#>
+167:Lara. (Weapons) There is any weapon in Lara's hand in <#> way
+168:Lara. (Holds) Lara is performing <#> action with (E) torch
+169:Lara. (Holds) Lara ignites a flame/torch at <#> frame of (E) way
+170:Lara. (Holds) Lara ignites a flare
+171:Lara. (Holds) Lara picks up a flaming flare (she has dropped before) in <#> way
+172:Lara. (Holds) The moment when Lara starts throwing/dropping a flare in <#> way
+173:Lara. (Holds) The flare in Lara's hand has started blinking (dying) (One Shot is recommended)
+174:Lara. (Holds) The flare in Lara’s hand will be dead in (E) more/less/exactly than <#> seconds
+175:Timer. Screen timer is <#> enabled/disabled
+176:Timer. Screen timer is at <#> seconds in (E) way
+177:Timer. The timer of the Moveable object will expire in the required seconds in <#> way
+178:Timer. The timer of <#> Moveable object has (E) activity status
+179:Lara. (Status) Lara is on a square with grey frame (to start the mechanical scarab)
+180:Lara. (Health) (E) More/less/exactly than <#> game tick frame is just being performed since the start of the dying animation
+181:Cheat. Lara is just <#> flying/not flying in DOZY mode
+182:Cheat. Flycheat is <#> enabled/disabled
+183:Weather. Horizon. Horizon is <#> enabled/disabled
+184:Weather. Sky. (E) Layer 1/2 is <#> enabled/disabled
+185:Weather. Lightning. Lightning is <#> enabled/disabled
+186:Weather. Horizon. ColAddHorizon is <#> enabled/disabled
+187:Weather. Sun. LensFlare coordinates and color are <#> enabled/disabled
+188:Weather. Sky. (E) Layer 1/2 is moving in <#> direction
+189:Weather. Sky. (E) Layer 1/2 has <#> speed
+190:Weather. Fog. VolumetricFX is <#> enabled/disabled
+191:Weather. Sun. Sun is just <#> moving or not
+192:Weather. Sun. Sun has <#> color
+193:Weather. Sky. (E) Layer 1/2 has <#> color
+194:Weather. Sun. Sun is just <#> pulsing or not
+195:Weather. Sky. (E) Layer 1/2 is just <#> pulsing or not
+196:Lara. (Holds) Lara <#> is just (not) hanging on a rope
+197:Lara. (Holds) Lara is hanging on a rope in <#> way in (E) position (only if her feet are not on the rope)
+198:Lara. (Holds) Lara's horizontal distance to the vertical is <#> when swinging on the rope (only if her feet are not on the rope)
+199:Moveable. The object works according to the required value in the OCB window in <#> way
+200:Moveable. <#> Object has (E) feature in OCB window
+201:Lara. (Holds) Lara <#> is just (not) driving a vehicle
+202:Lara. (Holds) Lara is just driving <#> vehicle
+203:Lara. (Holds) Lara used the switch the required times since the counting started (to on: one use, to off: another use) in <#> way
+204:Lara. (Holds) The usage of <#> object is (E) enabled/disabled (only made with F534 or tightrope)
+205:Moveable. <#> Falling Block (just performing shivering) will fall down in the required seconds
+206:Lara. (Holds) Lara is just moving <#> Pushable Object in (E) way
+207:Lara. (Holds) Lara is just pushing <#> Rollingball
+208:Lara. (Holds) Lara is just using <#> Rope in (E) way
+209:Lara. (Holds) Lara is just using <#> Parallel Bar in (E) way
+210:Weather. Fog. Distance fog (if VFX disabled) or fog bulb (if VFX enabled) trigger-based color is <#>
+211:Room. Room has <#> properties
+212:Moveable. The object (including Lara) is in <#> room
+213:Statics. The object works according to the required value in the OCB window in <#> way
+214:Statics. <#> Object has (E) feature in OCB window
+215:Object generally. Moveable (including Lara) or Statics object has <#> orientation
+216:Statics. <#> Object has a (E) wholeness status
+217:Moveable. The object (including Lara) vertical distance from the floor (with collision) under the object is <#>
+218:Sound. The <#> audio is playing in (E) mode
+219:Sound. The (E) audio/sound master volume (of Options menu) is <#> percent
+220:Earthquake. The actual intensity of the actual earthquake is <#>
+221:Moveable. The object slot will change the look for its MIP slot, in <#> distance from Lara
+222:Moveable. <#> Object is died/ruined (= general "death" condition)
+223:Camera. The current camera is <#>
+224:Enemy. The vitality percent of the enemy is <#>
+225:Enemy. Lara or else just hits <#> enemy with bullets (excluded: grenades, arrows; included: immortal enemies, accidental hits)
+226:Enemy. <#> Enemy is (E) poisoned or not (but living)
+227:Enemy. <#> Enemy has (E) AI property
+228:Enemy. <#> Enemy Jeep shoots the next grenade in the required seconds
+229:Enemy. <#> Enemy Jeep is just (E) friendly or not
+230:Enemy. <#> Baddy_1 or Baddy_2 has the required amount of Uzi ammunition
+231:Enemy. The torch in <#> Guide's hand has (E) status
+232:Enemy. The on-horse status of <#> Horseman is (E)
+233:Enemy. <#> Wraith1 (the fire wraith) has (E) "burn Lara" and "vulnerability" status
+234:Enemy. <#> Wraith2 (the ice wraith) is (E) vulnerable/invulnerable in water
+235:Enemy. <#> Wraith is just turning (E) clockwise/anti-clockwise
+236:Enemy. <#> Wraith have (E) special route
+237:Enemy. The required amount of Little Beetles have not been emitted yet from <#> emitter
+238:Enemy. The required amount of Fishes have not been emitted yet from <#> emitter
+239:Enemy. <#> Emitter just emits a fish
+240:Enemy. <#> Mutant is just (E) harmful/harmless
+241:Enemy. <#> Setha is just shooting energy in (E) way
+242:Enemy. <#> Harpy is just shooting energy in (E) way
+243:Enemy. The new location whereto <&> Ahmet will be transported when resetting Scales the next time is the required one
+244:Enemy. <#> Laser Head has (E) required status
+245:Enemy. The required number of body parts (of 12) still remains to shatter before <#> Hydra dies
+246:Trap. <#> Rollingball has the required speed in the required direction
+247:Trap. <#> Teeth Spikes is in (E) position
+248:Trap. The next extension of <#> Teeth Spikes (just drawn back) will happen in the required tick frame
+249:Trap. The rotation speed of <#> Joby Spike is the required one
+250:Trap. <#> Joby Spike is just rotating (E) clockwise/anti-clockwise
+251:Trap. The actual length of <#> Joby Spike is the required one
+252:Trap. The maximal length of <#> Joby Spike is the required one
+253:Trap. <#> Squishy Block2 falls in the required seconds
+254:Trap. <#> Seth Blade next strike starts in the required seconds
+255:Effect. <#> Sprinkler is in (E) working phase
+
+-----------------------------------------------------------------------------------------------
+
+See the descriptions for more details. (NG Center/Reference or NGLE/Set Trigger Type/Trigger's Remark.)
