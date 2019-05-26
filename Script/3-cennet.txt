@@ -1,9 +1,0 @@
-Name=			The Sunken City of Cennet
-Horizon=		DISABLED
-LoadCamera=	0,0,0,0,0,0,0
-Level=		DATA\cennet,031
-TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
-#INCLUDE "General_LevelSetting.txt"
-#INCLUDE "_Animations_Kurtis.txt"
-Image= 			2, 3, IF_PRELOAD, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
-Customize=		CUST_BACKGROUND, BKGDT_LOADING_LEVEL, IGNORE, IGNORE, 2

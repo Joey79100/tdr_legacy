@@ -5,10 +5,11 @@ LoadCamera=		0,0,0,0,0,0,255
 Level=			DATA\descent,255
 
 Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS, 256
+Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
 
-LevelFarView=	127
-Fog=			12,22,16
-FogRange=		-2, 24
+LevelFarView=	4
+Fog=			0,0,0
+FogRange=		2, 4
 
 ;GlobalTrigger=	300, -1, GT_CONDITION_GROUP, -1, 300, 301, 302
 ;TriggerGroup=	300, $8000, 60, $55		

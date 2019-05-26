@@ -505,10 +505,10 @@ enum object_types {
         BRIDGE_TILT3,
         BRIDGE_TILT4,
         BRIDGE_CUSTOM,
-        ROBOT_CLEANER,
-        ROBOT_STAR_WARS,
-        MECH_WARRIOR,
-        MECH_WARRIOR_LARA,
+        SEARCH_OBJECT1,
+        SEARCH_OBJECT2,
+        SEARCH_OBJECT3,
+        SEARCH_OBJECT4,
         UW_PROPULSOR,
         UW_PROPULSOR_LARA,
         MINE_CART,
@@ -529,6 +529,10 @@ enum object_types {
         NEW_SLOT18,
         NUMBER_OBJECTS
 };
+
+
+
+
 
 
 
