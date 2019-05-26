@@ -7,9 +7,9 @@ Level=			DATA\descent,255
 Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS, 256
 Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
 
-LevelFarView=	4
+LevelFarView=	6
 Fog=			0,0,0
-FogRange=		2, 4
+FogRange=		0, 6
 
 
 TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B

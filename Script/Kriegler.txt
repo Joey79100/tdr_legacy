@@ -43,7 +43,7 @@ ColAddHorizon=	ENABLED
 Layer1=		 25, 30, 34, 2				; Sky: 1st layer of moving clouds: Blue
 Layer2=		 15, 19, 20, 5				; Sky: 2nd layer of moving clouds: Yellow
 
-LevelFarView=	60
+LevelFarView=	80
 FogRange=		0,30
 FOG=			68,84,93
 

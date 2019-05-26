@@ -12,32 +12,32 @@ The Lost Valley
 Second Realm
 Beneath the Great Pyramid
 Custom_D: #0041
-Reb 3
+N/A
 The Line of Descent
 Passport
-Coastal Ruins
-Pharos, Temple Of Isis
-Cleopatra's Palaces
-Catacombs
-Temple Of Poseidon
-The Lost Library
-Hall Of Demetrius
-City Of The Dead
-Trenches
-Chambers Of Tulun
-Citadel Gate
-Street Bazaar
-Citadel
-The Sphinx Complex
-The Valley Temple
-Underneath The Sphinx
-Menkaure's Pyramid
-Inside Menkaure's Pyramid
-The Mastabas
-The Great Pyramid
-Khufu's Queens Pyramids
-Inside The Great Pyramid
-Temple Of Horus
+N/A
+N/A
+N/A
+Tomb Raider: The Dark Renaissance
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
+N/A
 %s
 USE
 CHOOSE AMMO
@@ -380,5 +380,4 @@ THE LAST STRING ENTRY
 16: Plugin_Slopes
 17: Plugin_ClassicInventory
 18: Plugin_SlopeFix
-
 19: Plugin_AkyVMix02

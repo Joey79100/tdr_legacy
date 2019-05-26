@@ -45,7 +45,7 @@ Security=		$55
 DemoDisc=		DISABLED
 LoadSave=		DISABLED
 CRS=			ENABLED
-WorldFarView=	127
+WorldFarView=	6
 
 ;-------------------------------------------------
 ; Diagnostic
@@ -77,8 +77,10 @@ WorldFarView=	127
 ;-------------------------------------------------
 
 [Title]
+WindowTitle=	Tomb Raider: The Dark Renaissance
 LoadCamera=	84246, -533, 78233, 81622, -1514, 78208, 40					;Src x,y,z target x,y,z, room
 Level=		DATA\TITLE, 025
+LevelFarView=	127
 
 ColorRGB=		1, 40, 140, 150
 ColorRGB=		2, 20, 70, 75
@@ -128,6 +130,7 @@ GlobalTrigger=	1, FGT_SINGLE_SHOT, GT_TITLE_SCREEN, TSCR_MAIN_TITLES, -1, 1, 1
 ;-------------------------------------------------
 
 [Level]		;CASTLE KRIEGLER
+WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Kriegler.txt"
 
 #INCLUDE 		"General.txt"
@@ -140,17 +143,19 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 ;-------------------------------------------------
 
 [Level]		;THE LINE OF DESCENT
+WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Descent.txt"
 
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
-Turbo=		TRB_ADAPTIVE_FARVIEW+TRB_ASYNC_FRAMES+TRB_HIGH_PRIORITY+TRB_OPTIMIZE_SORTING+TRB_SELECTIVE_VIEW, 30
+Turbo=		TRB_SELECTIVE_VIEW, 30
 
 ;-------------------------------------------------
 
 [Level]		;THE LOST VALLEY
+WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Valley.txt"
 
 #INCLUDE 		"General.txt"
@@ -165,6 +170,7 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 
 
 ;[Level]		;THE SUNKEN CITY OF CENNET
+;WindowTitle=	Tomb Raider: The Dark Renaissance
 ;#INCLUDE 		"Cennet.txt"
 
 ;#INCLUDE 		"General.txt"
@@ -174,6 +180,7 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 ;-------------------------------------------------
 
 ;[Level]		;THE ZEONATH
+;WindowTitle=	Tomb Raider: The Dark Renaissance
 ;#INCLUDE 		"Zeonath.txt"
 
 ;#INCLUDE 		"General.txt"
@@ -183,6 +190,7 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 ;-------------------------------------------------
 
 ;[Level]		;TIBET
+;WindowTitle=	Tomb Raider: The Dark Renaissance
 ;#INCLUDE 		"Tibet.txt"
 
 ;#INCLUDE 		"General.txt"
@@ -192,6 +200,7 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 ;-------------------------------------------------
 
 ;[Level]		;EGYPT
+;WindowTitle=	Tomb Raider: The Dark Renaissance
 ;#INCLUDE 		"Egypt.txt"
 ;#INCLUDE 		"Darkness.txt"
 
@@ -205,6 +214,7 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 ;-------------------------------------------------
 
 [Level]		;TECH DEMO - LARA
+WindowTitle=	Tomb Raider: The Dark Renaissance
 Name=			Demo - Lara
 Horizon=		ENABLED
 LoadCamera=	0,0,0,0,0,0,255
@@ -218,6 +228,7 @@ Level=		DATA\demo,031
 Customize=		CUST_HAIR_TYPE, HAIR_ONE_TR5_PONYTAIL
 
 ;[Level]		;TECH DEMO - KURTIS
+;WindowTitle=	Tomb Raider: The Dark Renaissance
 ;Name=		Demo - Kurtis
 ;Horizon=		ENABLED
 ;LoadCamera=	0,0,0,0,0,0,255
