@@ -11,11 +11,6 @@ LevelFarView=	4
 Fog=			0,0,0
 FogRange=		2, 4
 
-;GlobalTrigger=	300, -1, GT_CONDITION_GROUP, -1, 300, 301, 302
-;TriggerGroup=	300, $8000, 60, $55		
-;TriggerGroup=	301, $2000, 194, $82, $2000, 227, $74		
-;TriggerGroup=	302, $2000, 194, $78, $2000, 227, $0
-
 
 TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
 Image= 			2, 3, IF_PRELOAD, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE

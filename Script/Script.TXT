@@ -128,7 +128,7 @@ GlobalTrigger=	1, FGT_SINGLE_SHOT, GT_TITLE_SCREEN, TSCR_MAIN_TITLES, -1, 1, 1
 ;-------------------------------------------------
 
 [Level]		;CASTLE KRIEGLER
-#INCLUDE 		"1-kriegler.txt"
+#INCLUDE 		"Kriegler.txt"
 
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
@@ -145,6 +145,8 @@ Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
+
+Turbo=		TRB_ADAPTIVE_FARVIEW+TRB_ASYNC_FRAMES+TRB_HIGH_PRIORITY+TRB_OPTIMIZE_SORTING+TRB_SELECTIVE_VIEW, 30
 
 ;-------------------------------------------------
 
