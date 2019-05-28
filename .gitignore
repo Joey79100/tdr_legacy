@@ -20,6 +20,9 @@ Screenshots
 Maps\Kriegler\backup
 *kriegler[0-9]*.prj2
 *kriegler.prj2
+Maps\valley\backup
+*valley[0-9]*.prj2
+*valley.prj2
 backgame.*
 log_tom2pc.txt
 autosave.prj
