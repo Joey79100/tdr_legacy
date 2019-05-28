@@ -3,19 +3,19 @@
 Title Load Screen
 Demo - Lara
 Demo - Kurtis
-Mountain of the Martyr
+Mountain of the Martyrs
 Castle Kriegler
-The Sunken City of Cennet
-Eckhardt's Laboratory
+Sunken City of Cennet
+N/A
 The Zenoath
-The Lost Valley
-Second Realm
+Lost Valley
+Himalayan Precipice
 Beneath the Great Pyramid
 Custom_D: #0041
-N/A
+Schonbrunn Palace
 Line of Descent
 Passport
-N/A
+Dread Palace Ghemal
 N/A
 N/A
 Tomb Raider: The Dark Renaissance

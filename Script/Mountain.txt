@@ -1,0 +1,5 @@
+Name=			Mountain of the Martyrs
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
+LoadCamera=		0,0,0,0,0,0,255
+Level=			DATA\MOUNTAIN,255

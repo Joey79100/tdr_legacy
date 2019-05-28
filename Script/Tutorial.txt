@@ -1,0 +1,9 @@
+Name=			Schonbrunn Palace
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
+LoadCamera=		0,0,0,0,0,0,255
+Level=			DATA\TUTORIAL,255
+
+LevelFarView=	12
+Fog=			30,40,60
+FogRange=		0, 6

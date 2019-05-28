@@ -21,6 +21,15 @@
 ;Global Byte Delta2		(Flashlight On/Off)				(NOT USED ANYMORE)
 ;Current Value			(Not continuously)
 
+;=================================================
+;Remove Lara's Shadow
+;=================================================
+
+GlobalTrigger=	106,	-1,GT_ALWAYS,-1,-1,106,-1
+TriggerGroup=	106,	$2000,232,$0054, 	>	; Variables. Memory. Set the <&> Slot as Selected Slot Memory (Set Lara as Local Short Delta1)
+				$2000,232,$54, 		>	; Variables. Numeric. Set <&> Variable with (E)value (Set Local Short Delta1 to 0)
+				$2000,294,$C54			; Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory (Set Local Short Delta1 to FootStep (Short))	
+
 ;================================================================================================
 ;Water and Alpha fixes
 ;================================================================================================

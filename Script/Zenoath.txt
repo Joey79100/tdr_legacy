@@ -1,12 +1,9 @@
 Name=			The Zenoath
-Horizon=		DISABLED
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
 LoadCamera=		0,0,0,0,0,0,255
-Level=			DATA\zenoath,017
-LevelFarView=	127
-Fog=			0,0,0
-FogRange=		15, 20
+Level=			DATA\ZENOATH,255
 
-
-TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
-Image= 			2, 3, IF_PRELOAD, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
-Customize=		CUST_BACKGROUND, BKGDT_LOADING_LEVEL, IGNORE, IGNORE, 2
+LevelFarView=	12
+Fog=			64,32,32
+FogRange=		-2, 8

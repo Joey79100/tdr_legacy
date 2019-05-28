@@ -1,7 +1,0 @@
-
-; Set Trigger Type - FLIPEFFECT 294
-; Exporting: TRIGGER(3156:0) for FLIPEFFECT(294) {Tomb_NextGeneration}
-; <#> : Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory
-; <&> : Local Short Delta1
-; (E) : FootStep (Shadow below Lara or enemies) (Short)
-; Values to add in script command: $2000, 294, $C54

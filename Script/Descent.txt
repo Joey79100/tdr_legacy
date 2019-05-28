@@ -2,7 +2,7 @@ Name=			Line of Descent
 Horizon=		ENABLED
 ColAddHorizon=	ENABLED
 LoadCamera=		0,0,0,0,0,0,255
-Level=			DATA\descent,255
+Level=			DATA\DESCENT,255
 
 Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS, 256
 Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
@@ -10,6 +10,8 @@ Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
 LevelFarView=	12
 Fog=			0,0,0
 FogRange=		6, 12
+
+Turbo=			TRB_SELECTIVE_VIEW, 30
 
 
 TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B

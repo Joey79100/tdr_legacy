@@ -1,11 +1,8 @@
-;*************************************************
-;
+
 ; Tomb Raider: The Dark Renaissance
-;
-;*************************************************
 
 ;-------------------------------------------------
-; Platform Definitions
+; Global Settings/Extensions
 ;-------------------------------------------------
 
 [PSXExtensions]
@@ -18,16 +15,8 @@ Level=		.TR4
 Cut=			.TR4
 FMV=			.BIK
 
-;-------------------------------------------------
-; Language Filenames
-;-------------------------------------------------
-
 [Language]
 File=			0,English.TXT
-
-;-------------------------------------------------
-; Options
-;-------------------------------------------------
 
 [Options]
 Plugin=		6, Plugin_SlopeFix, IGNORE
@@ -45,7 +34,7 @@ Security=		$55
 DemoDisc=		DISABLED
 LoadSave=		DISABLED
 CRS=			ENABLED
-WorldFarView=	96
+WorldFarView=	127
 
 ;-------------------------------------------------
 ; Diagnostic
@@ -71,205 +60,103 @@ WorldFarView=	96
 ;LogItem=			FLI_SHOW_DIFFERENCES, 110	; VON CROY
 ;LogItem=			FLI_SHOW_DIFFERENCES, 113	; AI_FOLLOW with OCB 3 and codebit [--3--]
 
-
 ;-------------------------------------------------
-; Title
+; Levels
 ;-------------------------------------------------
 
 [Title]
 WindowTitle=	Tomb Raider: The Dark Renaissance
-LoadCamera=	84246, -533, 78233, 81622, -1514, 78208, 40					;Src x,y,z target x,y,z, room
-Level=		DATA\TITLE, 025
-LevelFarView=	127
+#INCLUDE		"Title.txt"
 
-ColorRGB=		1, 40, 140, 150
-ColorRGB=		2, 20, 70, 75
+[Level]			;SCHÖNBRUNN PALACE
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Tutorial.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
-Customize= 	CUST_BACKGROUND, BKGDT_INVENTORY, BKGDF_KEEP_GAME_SCREEN, IGNORE, IGNORE
-Customize= 	CUST_BACKGROUND, BKGDT_LOADING_LEVEL, BKGDF_HIDE_LOADING_BAR, IGNORE, IGNORE
-Customize= 	CUST_BACKGROUND, BKGDT_LASER_SIGHT, BKGDF_HIDE_SPRITE_LASER_SIGHT, IGNORE, IGNORE
+[Level]			;MOUNTAIN OF THE MARTYRS
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Mountain.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
-Customize=		CUST_BAR, BAR_LOAD_LEVEL, IGNORE, 5000, IGNORE, IGNORE, IGNORE, 1, 2, IGNORE
-
-Customize=		CUST_SET_TEXT_COLOR, TT_MAIN_MENU_ON, CL_BLINKING_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_LEVEL_NAME_ON, CL_BLINKING_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_DESCRIPTION_ON, CL_BLINKING_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_SELECT_LEVEL, CL_METAL
-Customize=		CUST_SET_TEXT_COLOR, TT_ACTION_INVENTORY_MENU_ON, CL_BLINKING_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_PAUSED_MENU_TITLE, CL_METAL
-Customize=		CUST_SET_TEXT_COLOR, TT_ITEM_NAME, CL_METAL
-Customize=		CUST_SET_TEXT_COLOR, TT_PAUSED_MENU_ITEMS, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_ACTION_INVENTORY_MENU_OFF, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_AMMO, CL_METAL
-Customize=		CUST_SET_TEXT_COLOR, TT_CREDITS, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_LEVEL_NAME_OFF, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_MAIN_MENU_OFF, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_NEW_LEVEL_ARROWS, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_OPTION_DESCRIPTIONS, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_OPTION_VALUES, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_DESCRIPTION_OFF, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_SAVEGAME_PANEL_TITLE, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_STATISTICS_DESCRIPTIONS, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_STATISTICS_VALUES, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_CAMERA_VIEW, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE1_BOTTOM, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE1_TOP, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_EXAMINE3, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_LEGEND, CL_WHITE
-Customize=		CUST_SET_TEXT_COLOR, TT_SCREEN_TIMER, CL_WHITE
-
-Parameters=	PARAM_ROTATE_ITEM, 2, FROT_LOOP, 0, IGNORE, IGNORE, IGNORE, ROTV_BACKWARD, IGNORE, $10, IGNORE, IGNORE
-Parameters=	PARAM_ROTATE_ITEM, 1, FROT_LOOP, 2, IGNORE, IGNORE, IGNORE, ROTV_FORWARD, IGNORE, $10, IGNORE, IGNORE
-;Parameters=	PARAM_ROTATE_ITEM, 1, FROT_LOOP, 0, ROTH_CLOCKWISE, IGNORE, $4, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
-Triggergroup=	1, $2000, 173, $1, $2000, 173, $2, $2000, 357, $2, $5000, 5, $F42
-GlobalTrigger=	1, FGT_SINGLE_SHOT, GT_TITLE_SCREEN, TSCR_MAIN_TITLES, -1, 1, 1
-
-;-------------------------------------------------
-; Level Order
-;-------------------------------------------------
-
-;01	Mountain of the Martyr	(DATA\KRIEGLER)		(CAESUM)
-;01b	------Castle Kriegler		(DATA\KRIEGLERB)	(CAESUM)
-;02	Line of Descent			(DATA\DESCENT)		(DALE)
-;03	Sunken City of Cennet		(DATA\CENNET)		(DALE)
-;04	The Zenoath			(DATA\ZENOATH)		(????)
-;04b	------Lost Valley		(DATA\ZENOATHB)		(????)
-;04c	------Tibet			(DATA\ZENOATHC)		(????)
-;04d	------Egypt			(DATA\ZENOATHD)		(????)
-
-;00	Schönbrunn Palace		(DATA\TUTORIAL)		(REMOVED)
-;02b	Eckhardt's Laboratory		(DATA\LAB)			(REMOVED)
-;06	Dread Palace Ghemal		(DATA\GHEMAL)		(REMOVED)
-
-;-------------------------------------------------
-; Levels In Progress
-;-------------------------------------------------
-
-[Level]		;CASTLE KRIEGLER
+[Level]			;CASTLE KRIEGLER
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Kriegler.txt"
-
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
-;=================================================
-;Remove Lara's Shadow
-;=================================================
-
-GlobalTrigger=	106,	-1,GT_ALWAYS,-1,-1,106,-1
-TriggerGroup=	106,	$2000,232,$0054, 	>	; Variables. Memory. Set the <&> Slot as Selected Slot Memory (Set Lara as Local Short Delta1)
-				$2000,232,$54, 		>	; Variables. Numeric. Set <&> Variable with (E)value (Set Local Short Delta1 to 0)
-				$2000,294,$C54			; Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory (Set Local Short Delta1 to FootStep (Short))	
-
-Customize= 	CUST_CINV_DEBUG,ENABLED
-Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
-
-;-------------------------------------------------
-
-[Level]		;LINE OF DESCENT
+[Level]			;LINE OF DESCENT
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Descent.txt"
-
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
-;=================================================
-;Remove Lara's Shadow
-;=================================================
+[Level]			;SUNKEN CITY OF CENNET
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Cennet.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Kurtis.txt"
 
-GlobalTrigger=	106,	-1,GT_ALWAYS,-1,-1,106,-1
-TriggerGroup=	106,	$2000,232,$0054, 	>	; Variables. Memory. Set the <&> Slot as Selected Slot Memory (Set Lara as Local Short Delta1)
-				$2000,232,$54, 		>	; Variables. Numeric. Set <&> Variable with (E)value (Set Local Short Delta1 to 0)
-				$2000,294,$C54			; Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory (Set Local Short Delta1 to FootStep (Short))	
+[Level]			;THE ZENOATH
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Zenoath.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
-Turbo=		TRB_SELECTIVE_VIEW, 30
-
-;-------------------------------------------------
-
-[Level]		;THE LOST VALLEY
+[Level]			;LOST VALLEY
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Valley.txt"
-
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
-Customize=		CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
+[Level]			;HIMALAYAN PRECIPICE
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Himalayan.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
-;-------------------------------------------------
-; Levels Unfinished
-;-------------------------------------------------
+[Level]			;BENEATH THE GREAT PYRAMID
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Egypt.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
-
-;[Level]		;SUNKEN CITY OF CENNET
-;WindowTitle=	Tomb Raider: The Dark Renaissance
-;#INCLUDE 		"Cennet.txt"
-
-;#INCLUDE 		"General.txt"
-;#INCLUDE 		"Inventory.txt"
-;#INCLUDE 		"Animations_Lara.txt"
-
-;-------------------------------------------------
-
-;[Level]		;THE ZENOATH
-;WindowTitle=	Tomb Raider: The Dark Renaissance
-;#INCLUDE 		"Zenoath.txt"
-
-;#INCLUDE 		"General.txt"
-;#INCLUDE 		"Inventory.txt"
-;#INCLUDE 		"Animations_Lara.txt"
-
-;-------------------------------------------------
-
-;[Level]		;TIBET
-;WindowTitle=	Tomb Raider: The Dark Renaissance
-;#INCLUDE 		"Tibet.txt"
-
-;#INCLUDE 		"General.txt"
-;#INCLUDE 		"Inventory.txt"
-;#INCLUDE 		"Animations_Lara.txt"
-
-;-------------------------------------------------
-
-;[Level]		;EGYPT
-;WindowTitle=	Tomb Raider: The Dark Renaissance
-;#INCLUDE 		"Egypt.txt"
-;#INCLUDE 		"Darkness.txt"
-
-;#INCLUDE 		"General.txt"
-;#INCLUDE 		"Inventory.txt"
-;#INCLUDE 		"Animations_Lara.txt"
-
+[Level]			;DREAD PALACE GHEMAL
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE 		"Ghemal.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Lara.txt"
 
 ;-------------------------------------------------
 ; Tech Demos
 ;-------------------------------------------------
 
-[Level]		;TECH DEMO - LARA
+[Level]			;TECH DEMO - LARA
 WindowTitle=	Tomb Raider: The Dark Renaissance
-Name=			Demo - Lara
-Horizon=		ENABLED
-LoadCamera=	0,0,0,0,0,0,255
-Level=		DATA\demo,031
-;TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B	 ; What's that?
+#INCLUDE		"Demo.txt"
 #INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
+
 #INCLUDE 		"WIP_stuff.txt"
 #INCLUDE 		"PickableStatues.txt"
-#INCLUDE 		"Inventory.txt"
-Customize=		CUST_HAIR_TYPE, HAIR_ONE_TR5_PONYTAIL
 
-;[Level]		;TECH DEMO - KURTIS
-;WindowTitle=	Tomb Raider: The Dark Renaissance
-;Name=		Demo - Kurtis
-;Horizon=		ENABLED
-;LoadCamera=	0,0,0,0,0,0,255
-;Level=		DATA\kurtis,031
-;TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B	 ; What's that?
-;#INCLUDE 		"General.txt"
-;#INCLUDE 		"Animations_Kurtis.txt"
-;#INCLUDE 		"WIP_stuff_VC_Lara.txt"
-;#INCLUDE 		"Inventory.txt"
-;Customize=	CUST_HAIR_TYPE, HAIR_PAGE_BOY
+[Level]			;TECH DEMO - KURTIS
+WindowTitle=	Tomb Raider: The Dark Renaissance
+#INCLUDE		"Kurtis.txt"
+#INCLUDE 		"General.txt"
+#INCLUDE 		"Inventory.txt"
+#INCLUDE 		"Animations_Kurtis.txt"
+
+#INCLUDE 		"WIP_stuff_VC_Lara.txt"
