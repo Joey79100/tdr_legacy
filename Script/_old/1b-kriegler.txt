@@ -1,0 +1,86 @@
+Name=			Castle Kriegler
+;LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
+LoadCamera=	82861,-944,3556,82432,-592,4608,174
+Level=		DATA\kriegler2,030
+
+TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
+#INCLUDE "General_LevelSetting.txt"
+#INCLUDE "_Animations_Lara.txt"
+#INCLUDE "enemies/wolf.txt"
+#INCLUDE "enemies/bat.txt"
+Image= 			2, 3, IF_PRELOAD, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
+Customize=		CUST_BACKGROUND, BKGDT_LOADING_LEVEL, IGNORE, IGNORE, 2
+Customize=		CUST_CAMERA, FCAM_INVISIBLE_LARA_ON_LOOK_CAM, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
+
+
+; ===========================================================
+; ----------------- Global weather outside -----------------
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
+;LensFlare=		 0,-200,0,     255, 180, 120
+Layer1=		 25, 30, 34, 2				; Sky: 1st layer of moving clouds: Blue
+Layer2=		 15, 19, 20, 5				; Sky: 2nd layer of moving clouds: Yellow
+
+LevelFarView=	96
+FogRange=		0,30
+FOG=			68,84,93
+
+ForceVolumetricFX= DISABLED
+;Customize=		CUST_FIX_WATER_FOG_BUG, ENABLED
+;Customize=		CUST_FIX_BUGS, BUGF_TRANSPARENT_WHITE_ON_FOG
+RAIN=			RAIN_ALL_OUTSIDE
+Customize=		CUST_RAIN, FR_CORRECT_SPRINKLERS, -1, 0, -1, -1, -1, -1, -1, -1, -1
+
+; ----------------------------------------------------------
+; ===========================================================
+
+
+
+; FGT_SINGLE_SHOT_RESUMED triggers the TRUE trigger only once, as expected
+; BUT triggers the FALSE trigger continously (which doesn't seem natural)
+
+
+
+; ==================== ENVIRONMENT STUFF ====================
+#DEFINE	Env_GT	700	; GlobalTriggers' start number for environment stuff.	Used:  2  consecutive free slots.
+#DEFINE	Env_TG	700	; TriggerGroups'  start number for environment stuff.	Used:  5  consecutive free slots.
+
+
+
+; ---===========--- Underwater environment  ---==========---
+;GlobalTrigger=	Env_GT,		FGT_SINGLE_SHOT_RESUMED, GT_CONDITION_GROUP, IGNORE, >
+;							Env_TG,   >					; When condition in Env_TG is ;true,
+;							Env_TG+1, >					; Do the actions of TG+1 (set ;underwater track & underwater fog).
+;							IGNORE					; If it's false, do nothing.
+;
+;TriggerGroup=	Env_TG,	$8000,60,$55						; When UNDERWATER SFX is playing...
+;TriggerGroup=	Env_TG+1,	$2000, 68, $166, >					; 	PLAY Track 102 on ch1
+;					$2000, 194, $7B, >					; 	Fog. Set START distance:  -3 ;squares
+;					$2000, 227, $6E						; 	Fog. Set  END  distance: +10 ;squares
+;
+; ---====================================================---
+;
+;
+;
+;
+; ---=========---    Out/Inside environment   ---========---
+;GlobalTrigger=	Env_GT+1,	IGNORE, GT_CONDITION_GROUP, IGNORE, >
+;						Env_TG+3, >						; When condition in Env_TG+3 is ;true,
+;						Env_TG+4, >						; Do the actions of TG+4.
+;						IGNORE						; If it's false, do nothing.
+;
+;TriggerGroup=	Env_TG+3,	TGROUP_NOT + $8000,60,$55				; When UNDERWATER SFX is NOT playing...
+;TriggerGroup=	Env_TG+4,	$2000, 68, $11E, >					;  	PLAY Track 031 on ch1
+;					$2000, 194, $78, >					; 	Fog. Set START distance: +0 ;squares
+;					$2000, 227, $5A						; 	Fog. Set  END  distance: +30 ;squares
+;
+;
+; ---====================================================---
+
+
+
+
+
+
+
+
