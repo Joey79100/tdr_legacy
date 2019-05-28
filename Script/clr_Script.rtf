@@ -46,7 +46,7 @@
 \par DemoDisc=\tab\tab DISABLED
 \par LoadSave=\tab\tab DISABLED
 \par CRS=\tab\tab\tab ENABLED
-\par WorldFarView=\tab 6
+\par WorldFarView=\tab 96
 \par 
 \par ;-------------------------------------------------
 \par ; Diagnostic
@@ -125,6 +125,22 @@
 \par Triggergroup=\tab 1, $2000, 173, $1, $2000, 173, $2, $2000, 357, $2, $5000, 5, $F42
 \par GlobalTrigger=\tab 1, FGT_SINGLE_SHOT, GT_TITLE_SCREEN, TSCR_MAIN_TITLES, -1, 1, 1
 \par 
+\par ;-------------------------------------------------
+\par ; Level Order
+\par ;-------------------------------------------------
+\par 
+\par ;01\tab Mountain of the Martyr\tab (DATA\\KRIEGLER)\tab\tab (CAESUM)
+\par ;01b\tab ------Castle Kriegler\tab\tab (DATA\\KRIEGLERB)\tab (CAESUM)
+\par ;02\tab Line of Descent\tab\tab\tab (DATA\\DESCENT)\tab\tab (DALE)
+\par ;03\tab Sunken City of Cennet\tab\tab (DATA\\CENNET)\tab\tab (DALE)
+\par ;04\tab The Zenoath\tab\tab\tab (DATA\\ZENOATH)\tab\tab (????)
+\par ;04b\tab ------Lost Valley\tab\tab (DATA\\ZENOATHB)\tab\tab (????)
+\par ;04c\tab ------Tibet\tab\tab\tab (DATA\\ZENOATHC)\tab\tab (????)
+\par ;04d\tab ------Egypt\tab\tab\tab (DATA\\ZENOATHD)\tab\tab (????)
+\par 
+\par ;00\tab Sch\'f6nbrunn Palace\tab\tab (DATA\\TUTORIAL)\tab\tab (REMOVED)
+\par ;02b\tab Eckhardt's Laboratory\tab\tab (DATA\\LAB)\tab\tab\tab (REMOVED)
+\par ;06\tab Dread Palace Ghemal\tab\tab (DATA\\GHEMAL)\tab\tab (REMOVED)
 \par 
 \par ;-------------------------------------------------
 \par ; Levels In Progress
@@ -138,18 +154,36 @@
 \par #INCLUDE \tab\tab "Inventory.txt"
 \par #INCLUDE \tab\tab "Animations_Lara.txt"
 \par 
+\par ;=================================================
+\par ;Remove Lara's Shadow
+\par ;=================================================
+\par 
+\par GlobalTrigger=\tab 106,\tab -1,GT_ALWAYS,-1,-1,106,-1
+\par TriggerGroup=\tab 106,\tab $2000,232,$0054, \tab >\tab ; Variables. Memory. Set the <&> Slot as Selected Slot Memory (Set Lara as Local Short Delta1)
+\par \tab\tab\tab\tab $2000,232,$54, \tab\tab >\tab ; Variables. Numeric. Set <&> Variable with (E)value (Set Local Short Delta1 to 0)
+\par \tab\tab\tab\tab $2000,294,$C54\tab\tab\tab ; Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory (Set Local Short Delta1 to FootStep (Short))\tab 
+\par 
 \par Customize= \tab CUST_CINV_DEBUG,ENABLED
 \par Customize=\tab\tab CUST_CAMERA,FCAM_INVISIBLE_LARA_ON_LOOK_CAM,-1,-1,-1,-1,-1,-1,-1,-1
 \par 
 \par ;-------------------------------------------------
 \par 
-\par [Level]\tab\tab ;THE LINE OF DESCENT
+\par [Level]\tab\tab ;LINE OF DESCENT
 \par WindowTitle=\tab Tomb Raider: The Dark Renaissance
 \par #INCLUDE \tab\tab "Descent.txt"
 \par 
 \par #INCLUDE \tab\tab "General.txt"
 \par #INCLUDE \tab\tab "Inventory.txt"
 \par #INCLUDE \tab\tab "Animations_Lara.txt"
+\par 
+\par ;=================================================
+\par ;Remove Lara's Shadow
+\par ;=================================================
+\par 
+\par GlobalTrigger=\tab 106,\tab -1,GT_ALWAYS,-1,-1,106,-1
+\par TriggerGroup=\tab 106,\tab $2000,232,$0054, \tab >\tab ; Variables. Memory. Set the <&> Slot as Selected Slot Memory (Set Lara as Local Short Delta1)
+\par \tab\tab\tab\tab $2000,232,$54, \tab\tab >\tab ; Variables. Numeric. Set <&> Variable with (E)value (Set Local Short Delta1 to 0)
+\par \tab\tab\tab\tab $2000,294,$C54\tab\tab\tab ; Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory (Set Local Short Delta1 to FootStep (Short))\tab 
 \par 
 \par Turbo=\tab\tab TRB_SELECTIVE_VIEW, 30
 \par 
@@ -170,7 +204,7 @@
 \par ;-------------------------------------------------
 \par 
 \par 
-\par ;[Level]\tab\tab ;THE SUNKEN CITY OF CENNET
+\par ;[Level]\tab\tab ;SUNKEN CITY OF CENNET
 \par ;WindowTitle=\tab Tomb Raider: The Dark Renaissance
 \par ;#INCLUDE \tab\tab "Cennet.txt"
 \par 
@@ -180,9 +214,9 @@
 \par 
 \par ;-------------------------------------------------
 \par 
-\par ;[Level]\tab\tab ;THE ZEONATH
+\par ;[Level]\tab\tab ;THE ZENOATH
 \par ;WindowTitle=\tab Tomb Raider: The Dark Renaissance
-\par ;#INCLUDE \tab\tab "Zeonath.txt"
+\par ;#INCLUDE \tab\tab "Zenoath.txt"
 \par 
 \par ;#INCLUDE \tab\tab "General.txt"
 \par ;#INCLUDE \tab\tab "Inventory.txt"

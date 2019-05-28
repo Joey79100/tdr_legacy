@@ -8,6 +8,7 @@
 ;Local Short Alfa2
 ;Local Short Beta1
 ;Local Short Beta2
+;Local Short Delta1 	(Lara's Shadow)
 ;Local Byte Delta1		
 ;Local Byte Delta2		
 ;Local Byte Delta3		(Grip Meter %)

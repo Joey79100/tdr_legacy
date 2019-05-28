@@ -1,0 +1,7 @@
+
+; Set Trigger Type - FLIPEFFECT 294
+; Exporting: TRIGGER(67:0) for FLIPEFFECT(294) {Tomb_NextGeneration}
+; <#> : Variables. Memory. Copy from <&>Numeric Variable to (E)Selected Slot Memory
+; <&> : Local Byte Alfa4
+; (E) : Number of Meshes (Short)
+; Values to add in script command: $2000, 294, $43

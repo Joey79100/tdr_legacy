@@ -1,0 +1,7 @@
+
+; Set Trigger Type - FLIPEFFECT 232
+; Exporting: TRIGGER(84:0) for FLIPEFFECT(232) {Tomb_NextGeneration}
+; <#> : Variables. Numeric. Set <&>Variable with (E)value
+; <&> : Local Short Delta1
+; (E) : Value      0
+; Values to add in script command: $2000, 232, $54
