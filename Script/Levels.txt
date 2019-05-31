@@ -67,4 +67,3 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
-

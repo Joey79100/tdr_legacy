@@ -1,15 +1,19 @@
 Name=			Himalayan Precipice
 Horizon=		ENABLED
 ColAddHorizon=	ENABLED
+Layer1=			0, 5, 40, 4
+Layer2=			5, 5, 5, 2	
+
+Snow=			SNOW_ALL_OUTSIDE
 LoadCamera=		0,0,0,0,0,0,255
-Level=			DATA\HIMALAYAN,255
+Level=			DATA\HIMALAYAN,253
 
 Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS, 256
 Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
 
-LevelFarView=	6
-Fog=			60,60,80
-FogRange=		-2, 6
+LevelFarView=	127
+Fog=			20,30,60
+FogRange=		-2, 18
 
 
 TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
