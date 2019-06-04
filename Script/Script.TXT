@@ -77,14 +77,14 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 
 [Level]			;MOUNTAIN OF THE MARTYRS
 WindowTitle=	Tomb Raider: The Dark Renaissance
-#INCLUDE 		"Mountain.txt"
+#INCLUDE 		"Kriegler.txt"
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
 [Level]			;CASTLE KRIEGLER
 WindowTitle=	Tomb Raider: The Dark Renaissance
-#INCLUDE 		"Kriegler.txt"
+#INCLUDE 		"Kriegler2.txt"
 #INCLUDE 		"General.txt"
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
