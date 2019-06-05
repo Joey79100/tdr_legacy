@@ -217,12 +217,3 @@ GlobalTrigger=	1015, -1, GT_ALWAYS, 2, 1025, 1026, -1
 Triggergroup=	1027, $8000,232,$0001 ;if Lara doesn't have PUZZLE ITEM 2
 Triggergroup=	1028, $2000,50,$0101; add +1 PUZZLE ITEM 2
 GlobalTrigger=	1016, FGT_DISABLED, GT_ALWAYS, 2, 1027, 1028, -1
-
-;-----------------------------------------------------------------------------
-;UGLY WORKAROUND FOR FALLING BLOCKS AND SINKS IN ONE ROOM
-;-----------------------------------------------------------------------------
-;MultEnvCondition=100, ENV_ROOM_IS, 81, IGNORE, IGNORE, IGNORE, IGNORE
-;Triggergroup=	1029, $8000,100,$0010 ;if Lara is in Room 81
-;Triggergroup=	1030, $5000,319,$002E; TRIGGER SINK of ID 319
-;Triggergroup=	1031, $5000,319,$002C; UNTRIGGER SINK of ID 319
-;GlobalTrigger=	1017, -1, GT_CONDITION_GROUP, IGNORE, 1029, 1030, -1
