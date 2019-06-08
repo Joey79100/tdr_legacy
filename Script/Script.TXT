@@ -142,8 +142,6 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 ; Tech Demos
 ;-------------------------------------------------
 
-
-
 [Level]			;TECH DEMO - LARA
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE		"Demo.txt"

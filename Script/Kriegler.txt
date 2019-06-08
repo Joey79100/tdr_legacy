@@ -80,7 +80,8 @@ GlobalTrigger=	Env_GT,		FGT_SINGLE_SHOT_RESUMED, GT_CONDITION_GROUP, IGNORE, >
 TriggerGroup=	Env_TG,	$8000,60,$55						; When UNDERWATER SFX is playing...
 TriggerGroup=	Env_TG+1,	$2000, 68, $166, >					; 	PLAY Track 102 on ch1
 					$2000, 194, $7B, >					; 	Fog. Set START distance:  -3 ;squares
-					$2000, 227, $6E						; 	Fog. Set  END  distance: +10 ;squares
+					$2000, 227, $6E, >					; 	Fog. Set  END  distance: +10 ;squares
+					$2000,224,$0004						; Fog. Set FOG color to #4
 
 ; ---====================================================---
 ;
@@ -96,7 +97,8 @@ GlobalTrigger=	Env_GT+1,	IGNORE, GT_CONDITION_GROUP, IGNORE, >
 TriggerGroup=	Env_TG+3,	TGROUP_NOT + $8000,60,$55				; When UNDERWATER SFX is NOT playing...
 TriggerGroup=	Env_TG+4,	$2000, 68, $11E, >					;  	PLAY Track 031 on ch1
 					$2000, 194, $78, >					; 	Fog. Set START distance: +0 ;squares
-					$2000, 227, $5A						; 	Fog. Set  END  distance: +30 ;squares
+					$2000, 227, $5A, >					; 	Fog. Set  END  distance: +30 ;squares
+					$2000,224,$0003						;	Fog. Set FOG color to #3
 
 
 ;-----------------------------------------------------------------------------
