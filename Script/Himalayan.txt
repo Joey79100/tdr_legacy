@@ -1,21 +1,44 @@
 Name=			Himalayan Precipice
 Horizon=		ENABLED
-ColAddHorizon=	ENABLED
-Layer1=			0, 5, 40, 4
-Layer2=			5, 5, 5, 2	
+ColAddHorizon=	ENABLED	
 
 Snow=			SNOW_ALL_OUTSIDE
 LoadCamera=		0,0,0,0,0,0,255
 Level=			DATA\HIMALAYAN,253
 
-Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS, 256
-Customize= 		CUST_LIGHT_OBJECT, WHITE_LIGHT, 128, 50, 0, 16, -1
+Customize=      CUST_SET_STILL_COLLISION,COLL_STATICS+COLL_DOORS+COLL_ANIMATINGS+COLL_PANELS+COLL_FAKE_WALLS,256
+Customize= 		CUST_LIGHT_OBJECT,WHITE_LIGHT,128,50,0,16,-1
 
 LevelFarView=	127
 Fog=			20,30,60
-FogRange=		-2, 18
+FogRange=		-2,18
 
 
-TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
-Image= 			2, 3, IF_PRELOAD, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE, IGNORE
-Customize=		CUST_BACKGROUND, BKGDT_LOADING_LEVEL, IGNORE, IGNORE, 2
+#DEFINE	Env_GT	700
+#DEFINE	Env_TG	700
+
+
+GlobalTrigger=	Env_GT,FGT_SINGLE_SHOT_RESUMED,GT_CONDITION_GROUP,-1,>
+				Env_TG,>												;If true
+				Env_TG+1,>												;Set Underwater SFX and FOG
+				-1														;If false, do nothing
+
+TriggerGroup=	Env_TG,$8000,60,$55										;If Underwater SFX playing
+TriggerGroup=	Env_TG+1,$2000,68,$166,>								;Play "102_AMB_Underwater_L"
+				$2000,194,$7B,>											;FOG Start -3 
+				$2000,227,$0074											;FOG End +4
+
+GlobalTrigger=	Env_GT+1,-1,GT_CONDITION_GROUP,-1,>
+				Env_TG+3,>												;If true
+				Env_TG+4,>												;Set Default SFX and FOG
+				-1														;If false, do nothing
+
+TriggerGroup=	Env_TG+3,TGROUP_NOT+$8000,60,$55						;If Underwater SFX NOT playing
+TriggerGroup=	Env_TG+4,$2000,68,$01FD,>								;Play "253_AMB_Himalayan"
+				$2000,194,$007A,>										;FOG Start -2
+				$2000,227,$0066											;FOG End +18
+
+
+TriggerGroup=	221,TGROUP_USE_FOUND_ITEM_INDEX+$5000,-1,$22B
+Image= 			2,3,IF_PRELOAD,-1,-1,-1,-1,-1,-1
+Customize=		CUST_BACKGROUND,BKGDT_LOADING_LEVEL,-1,-1,2
