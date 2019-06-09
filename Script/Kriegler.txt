@@ -228,3 +228,8 @@ GlobalTrigger=	1016, FGT_DISABLED, GT_ALWAYS, 2, 1027, 1028, -1
 ;Triggergroup=	1030, $5000,319,$002E; TRIGGER SINK of ID 319
 ;Triggergroup=	1031, $5000,319,$002C; UNTRIGGER SINK of ID 319
 ;GlobalTrigger=	1017, -1, GT_CONDITION_GROUP, IGNORE, 1029, 1030, -1
+
+;-----------------------------------------------------------------------------
+;DESTROYING BRIDGE
+;-----------------------------------------------------------------------------
+Triggergroup=	1029, $5000,56,$002B, $5000,57,$002B, $5000,58,$002B, $5000,59,$002B,$2000,70,$1F08 ;Activate MOVABLEs of ID 56/57/58/59
