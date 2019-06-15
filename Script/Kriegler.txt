@@ -1,4 +1,4 @@
-Name=			Mountain of the Martyrs
+Name=		Mountain of the Martyrs
 ;LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
 LoadCamera=	83438,911,3463,82878,-594,4100,183
 Level=		DATA\kriegler,030
@@ -239,4 +239,12 @@ GlobalTrigger=	1016, FGT_DISABLED, GT_ALWAYS, 2, 1027, 1028, -1
 ;-----------------------------------------------------------------------------
 ;DESTROYING BRIDGE
 ;-----------------------------------------------------------------------------
-Triggergroup=	1029, $5000,56,$002B, $5000,57,$002B, $5000,58,$002B, $5000,59,$002B,$2000,70,$1F08 ;Activate MOVABLEs of ID 56/57/58/59
+Triggergroup=	1029, $5000+TGROUP_SINGLE_SHOT,56,$002B, $5000,57,$002B, $5000,58,$002B, $5000,59,$002B ;Activate MOVABLEs of ID 56/57/58/59
+
+;-----------------------------------------------------------------------------
+;ROLLINGBALL DESTROYING FLOOR IN THE TOWER
+;-----------------------------------------------------------------------------
+Triggergroup=	1033, $2000+TGROUP_SINGLE_SHOT,127,$0067, $5000,353,$002B ;Activate ORGANIZER 103, Activate MOVABLE ROLLINGBALL 353
+Triggergroup=	1034, $2000+TGROUP_SINGLE_SHOT,125,$0000, $5000,230,$002B, $5000,231,$002B, $5000,232,$002B, $5000,347,$002B, $5000,348,$002B, $5000,349,$002B, $5000,350,$002B, $5000,351,$002B, $5000,352,$002B ;Activate FLIPMap=0 MOVABLEs 230/231/232/347/348/349/350/351/352
+
+Organizer=	103, -1, -1, 2, 1034
