@@ -1,5 +1,7 @@
 
 ; Tomb Raider: The Dark Renaissance
+; 1-1000 = range of TRIGGERGROUPS and GLOBALTRIGGERS reserved for Joey's GLOBAL scripts
+; 1-99 = range of ORGANIZERS, PARAMETERS and other STUFF reserved for Joey's GLOBAL scripts
 
 ;-------------------------------------------------
 ; Global Settings/Extensions
@@ -141,6 +143,7 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 ;-------------------------------------------------
 ; Tech Demos
 ;-------------------------------------------------
+
 
 
 
