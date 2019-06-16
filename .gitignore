@@ -29,3 +29,7 @@ NG_Tom2Pc_Last_Log.txt
 *.lnk
 DETECTED CRASH.txt
 db_patches_crash.bin
+Script/.vscode/
+Exported_*.txt
+*.trw
+Crash_Report_*.txt
