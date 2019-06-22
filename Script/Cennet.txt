@@ -8,12 +8,7 @@ Customize=      CUST_SET_STILL_COLLISION, COLL_STATICS+COLL_DOORS+COLL_ANIMATING
 
 LevelFarView=	127
 Fog=			64, 50, 64
-FogRange=		-2, 12
-
-;GlobalTrigger=	300, -1, GT_CONDITION_GROUP, -1, 300, 301, 302
-;TriggerGroup=	300, $8000, 60, $55		
-;TriggerGroup=	301, $2000, 194, $82, $2000, 227, $74		
-;TriggerGroup=	302, $2000, 194, $78, $2000, 227, $0
+FogRange=		0, 18
 
 
 TriggerGroup=	221, TGROUP_USE_FOUND_ITEM_INDEX+$5000, -1, $22B
