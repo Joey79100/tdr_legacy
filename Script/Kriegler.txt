@@ -278,3 +278,18 @@ Triggergroup=	1033, $2000+TGROUP_SINGLE_SHOT,127,$0067, $5000,353,$002B ;Activat
 Triggergroup=	1034, $2000+TGROUP_SINGLE_SHOT,125,$0000, $5000,230,$002B, $5000,231,$002B, $5000,232,$002B, $5000,347,$002B, $5000,348,$002B, $5000,349,$002B, $5000,350,$002B, $5000,351,$002B, $5000,352,$002B ;Activate FLIPMap=0 MOVABLEs 230/231/232/347/348/349/350/351/352
 
 Organizer=	103, -1, -1, 2, 1034
+
+;-----------------------------------------------------------------------------
+;DESTROYING OBSTACLE USING MOTORBOAT
+;-----------------------------------------------------------------------------
+Enemy= MOTOR_BOAT, -1, NEF_EASY_HEAVY_ENABLING, -1, -1, -1, -1, -1
+Customize=CUST_SHATTER_SPECIFIC,MOTOR_BOAT
+Triggergroup= 1035, $019000, 362, $74 ; if MOTORBOAT 362 activated this HEAVY TRIGGER
+Triggergroup= 1036, $2000+TGROUP_SINGLE_SHOT,160,$0143,$2000,160,$0144,$5000,363,$002B,$5000,364,$002B,$5000,365,$002B,$5000,366,$002B,$5000,367,$002B,$5000,368,$002B,$5000,369,$002B,$5000,370,$002B,$5000,371,$002B ;Shatter architecture 8-7 (323-324), Activate MOVABLES 363-370
+GlobalTrigger=	1018, FGT_DISABLED, GT_ALWAYS, -1, 1036, -1
+
+;-----------------------------------------------------------------------------
+;DESTROY BRIDGE IF LARA IS DRIVING A BOAT
+;-----------------------------------------------------------------------------
+Triggergroup= 1037, $019000, 362, $74 ; if LARA is driving a MOTORBOAT
+GlobalTrigger=	1019, -1, GT_CONDITION_GROUP, IGNORE, 1037, 1029, -1
