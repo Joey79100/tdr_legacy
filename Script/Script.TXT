@@ -43,6 +43,7 @@ WorldFarView=	127
 ;-------------------------------------------------
 
 ;Diagnostic=		ENABLED
+;DiagnosticType=		DGX_COMMON_VARIABLES, IGNORE ; show variable values
 
 ; -- Shows only cheat codes --
 ;DiagnosticType=	DGX_LARA + DGX_ANIMATION + DGX_CHEATS, EDGX_SLOW_MOTION+EDGX_SWAP_VIEW	; Shows only information about Lara
@@ -137,6 +138,8 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Ghemal.txt"
 #INCLUDE 		"General.txt"
+
+
 
 
 

@@ -1,6 +1,7 @@
 Name=		Mountain of the Martyrs
 ;LoadCamera=	11088,-1100,28896,11119,-1399,31486,0
-LoadCamera=	83438,911,3463,82878,-594,4100,183
+;LoadCamera=	83438,911,3463,82878,-594,4100,183
+LoadCamera=	82591,-718,4074,82297,-592,5019,193
 Level=		DATA\kriegler,030
 
 Puzzle=		5,Torch,-1,-1,-1,-1,-1,-1
@@ -120,8 +121,9 @@ TriggerGroup=	Env_TG+4,	$2000, 68, $11E, >					;  	PLAY Track 031 on ch1
 ; <&> Global Short Alfa1
 ; Copy next line to your script: $2000,284,$0010
 
-GlobalTrigger=	1001, IGNORE,GT_ALWAYS, IGNORE, IGNORE, 1001, IGNORE
+GlobalTrigger=	1001, IGNORE,GT_ALWAYS, IGNORE, 1038, 1001, IGNORE
 TriggerGroup=	1001, $5000,86,$0036, $2000,256,$1D10, $2000,284,$0010
+Triggergroup= 	1038, $9000,86,$0A36 ; if LARA is 10 units (or less) far from TURN_SWITCH (ID 86)
 
 Parameters=		PARAM_BIG_NUMBERS, 16384
 
@@ -256,16 +258,6 @@ MultEnvCondition=	242, ENV_ANIM_COMPLETE, IGNORE, IGNORE
 ; // THEN swap LARA.mesh10 with MESHSWAP3
 TriggerGroup=	243,	$2000, 100, $80A				; F100 | Lara. (Mesh) Set single <Lara Right Hand>Lara mesh with mesh got from (0 LARA)slot
 ;----------------------------------------------------------------------------
-
-;-----------------------------------------------------------------------------
-;UGLY WORKAROUND FOR FALLING BLOCKS AND SINKS IN ONE ROOM
-;-----------------------------------------------------------------------------
-;MultEnvCondition=100, ENV_ROOM_IS, 81, IGNORE, IGNORE, IGNORE, IGNORE
-;Triggergroup=	1029, $8000,100,$0010 ;if Lara is in Room 81
-;Triggergroup=	1030, $5000,319,$002E; TRIGGER SINK of ID 319
-;Triggergroup=	1031, $5000,319,$002C; UNTRIGGER SINK of ID 319
-;GlobalTrigger=	1017, -1, GT_CONDITION_GROUP, IGNORE, 1029, 1030, -1
-
 ;-----------------------------------------------------------------------------
 ;DESTROYING BRIDGE
 ;-----------------------------------------------------------------------------
@@ -278,18 +270,3 @@ Triggergroup=	1033, $2000+TGROUP_SINGLE_SHOT,127,$0067, $5000,353,$002B ;Activat
 Triggergroup=	1034, $2000+TGROUP_SINGLE_SHOT,125,$0000, $5000,230,$002B, $5000,231,$002B, $5000,232,$002B, $5000,347,$002B, $5000,348,$002B, $5000,349,$002B, $5000,350,$002B, $5000,351,$002B, $5000,352,$002B ;Activate FLIPMap=0 MOVABLEs 230/231/232/347/348/349/350/351/352
 
 Organizer=	103, -1, -1, 2, 1034
-
-;-----------------------------------------------------------------------------
-;DESTROYING OBSTACLE USING MOTORBOAT
-;-----------------------------------------------------------------------------
-Enemy= MOTOR_BOAT, -1, NEF_EASY_HEAVY_ENABLING, -1, -1, -1, -1, -1
-Customize=CUST_SHATTER_SPECIFIC,MOTOR_BOAT
-Triggergroup= 1035, $019000, 362, $74 ; if MOTORBOAT 362 activated this HEAVY TRIGGER
-Triggergroup= 1036, $2000+TGROUP_SINGLE_SHOT,160,$0143,$2000,160,$0144,$5000,363,$002B,$5000,364,$002B,$5000,365,$002B,$5000,366,$002B,$5000,367,$002B,$5000,368,$002B,$5000,369,$002B,$5000,370,$002B,$5000,371,$002B ;Shatter architecture 8-7 (323-324), Activate MOVABLES 363-370
-GlobalTrigger=	1018, FGT_DISABLED, GT_ALWAYS, -1, 1036, -1
-
-;-----------------------------------------------------------------------------
-;DESTROY BRIDGE IF LARA IS DRIVING A BOAT
-;-----------------------------------------------------------------------------
-Triggergroup= 1037, $019000, 362, $74 ; if LARA is driving a MOTORBOAT
-GlobalTrigger=	1019, -1, GT_CONDITION_GROUP, IGNORE, 1037, 1029, -1
