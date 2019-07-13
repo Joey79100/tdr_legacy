@@ -33,3 +33,5 @@ Script/.vscode/
 Exported_*.txt
 *.trw
 Crash_Report_*.txt
+db_patches_crash.bin
+NG_Settings.bin
