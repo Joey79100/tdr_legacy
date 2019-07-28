@@ -1,2 +1,10 @@
 # the-dark-renaissance
-An unofficial continuation of Tomb Raider the Angel of Darkness
+A CANCELLED continuation of Tomb Raider the Angel of Darkness
+
+Authors:
+Caesum, Dale, Krystian, Joey, Adam Khuverr, thomaskobialka, Mrshina, Lore, AODFan, tomblover and probably an entire lot of other people who worked on it from time to time.
+
+WARNING: Some prj2 files were made with Tomb Editor version that was not released yet (28.07.2019). Because of that I strongly suggest to wait until next TE release (probably in august 2019) before editing any levels or wad2 files.
+
+TERMS OF USE:
+You can take anything you like from this project for as long as you credit the people mentioned above.
