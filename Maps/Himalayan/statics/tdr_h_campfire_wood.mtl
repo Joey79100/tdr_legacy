@@ -1,6 +1,0 @@
-# models\misc\Campfire
-newmtl material_0
-Kd 1.0000 1.0000 1.0000
-illum 0
-map_Kd tdr_h_campfire_wood_material_0.tga
-

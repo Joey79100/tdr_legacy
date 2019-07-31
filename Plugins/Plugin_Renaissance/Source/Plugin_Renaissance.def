@@ -1,4 +1,0 @@
-LIBRARY TRNG_PLUGIN
-DESCRIPTION "Extends tomb4 features"
-EXPORTS
-	DllMain	@1

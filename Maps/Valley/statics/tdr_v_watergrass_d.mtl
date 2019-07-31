@@ -1,6 +1,0 @@
-# models\objects\forest\Water_plants01
-newmtl material_0
-Kd 1.0000 1.0000 1.0000
-illum 0
-map_Kd tdr_v_watergrass_d_material_0.tga
-

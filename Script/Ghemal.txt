@@ -1,9 +1,0 @@
-Name=			Dread Palace Ghemal
-Horizon=		ENABLED
-ColAddHorizon=	ENABLED
-LoadCamera=		0,0,0,0,0,0,255
-Level=			DATA\GHEMAL,255
-
-LevelFarView=	6
-Fog=			10,0,10
-FogRange=		-2, 4
