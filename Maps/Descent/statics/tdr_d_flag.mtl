@@ -1,0 +1,6 @@
+# models\objects\m_ortel\flag05
+newmtl material_0
+Kd 1.0000 1.0000 1.0000
+illum 0
+map_Kd tdr_d_flag_material_0.tga
+

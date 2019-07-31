@@ -1,0 +1,28 @@
+#0 = General dark fog
+#1 = Tutorial general
+#2 = Tutorial water
+#3 = Mountain/Kriegler general = 68,84,93
+#4 = Mountain/Kriegler water = 55,72,65
+#5 = Descent general
+#6 = Descent water
+#7 = Cennet general
+#8 = Cennet water
+#9 = Zenoath general
+#10 = Zenoath water
+#11 = Valley general
+#12 = Valley water
+#13 = Precipe general
+#14 = Precipe water
+#15 = Pyramid general
+#16 = Pyramid water
+#17 = Ghemal general
+#18 = Ghemal water
+#19 = unused
+#20 = unused
+#21 = unused
+#22 = unused
+#23 = unused
+#24 = unused
+#25 = unused
+#26 = unused
+#27 = unused

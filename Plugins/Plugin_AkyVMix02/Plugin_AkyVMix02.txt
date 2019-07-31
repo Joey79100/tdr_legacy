@@ -1,0 +1,160 @@
+Plugin version is 1.0.0.0.
+Useable TRNG is 1.3.0.7 or higher.
+
+Other plugins needed: none.
+
+This plugin contains several new tiny features.
+
+See the descriptions for more details:
+
+- New script constant descriptions: NG Center/Reference.
+- New trigger descriptions: NGLE/Set Trigger Type/Trigger's Remark.
+
+------------------------------------
+
+FEATURES IN THE PLUGIN:
+
+
+.....................
+
+Remove/restore the shadow of an enemy type, or Lara, or check it:
+
+F585:Enemy. Remove the shadow of <&> enemy type (or Lara) for (E) case 
+F586:Enemy. Restore the shadow of <&> enemy type (or Lara) for (E) case 
+C115:Enemy. The shadow of <#> enemy type (or Lara) is (E) seeable/removed
+
+.....................
+
+An "ultimate" scripted tool to handle numerical variables, even with new variables, if Paolone's Local Long Alfa, Global Short Beta1 etc. variables and their triggers are just not enough and/or seeming complex for your game.
+Notable extra features: floating values and data transport between the levels and the title are supported!
+
+F587:Variables. Execute <&> operation
+
+Print a Diagnostic screen for new variables or "old" memory zone fields.
+Notable extra feature: a spectacular display if a bit is set or cleared.
+
+F588: Variables. Diagnostic. (E) Enable/disable <&> diagnostic
+
+Print new variables or "old" memory zone fields in the log:
+
+F589:Variables. Log. Print <&> value in the log
+F590:Variables. Log. Remove <&> value from the log
+
+Print new variables or "old" memory zone fields, in your custom text, on the screen:
+
+F591:Text. (E) Print/remove custom text and variable with <&> parameters
+
+Note:
+F591 is useable even without printing variables/fields. Which is good, because special F591 features (like eg. variablke-based position) can be used even for printing texts without variables/fields.
+
+Examine new variables or "old" memory zone fields, if they are equal/bigger/smaller than another number:
+
+C114: Variables. Examine <&> relation
+
+Note:
+Prints are gone with static/flyby cameras, this will fix it:
+
+F598:Camera. <&> Start/stop fixing "text/image/sprite is missing from static/flyby camera screen" bug
+
+.....................
+
+An extended version of the exportable "FINISH trigger" (trng.dll F82) to perform a level jump even to LARA_START_POS objects - just like in the case of the classic FINISH trigger:
+
+F592:Finish. Load <&>level to (E) Lara
+
+.....................
+
+Sprite features:
+- A better control for sprites, instead of of trng.dll PARAM_SHOW_SPRITE, in some meanings, i.e. F595 is able to place the sprite even in variable-based positions and/or to place/remove it by degrees, fading it in/out:
+
+F595:Sprite. (E) Show/hide sprite with <&> parameters
+
+- "Raindrops on the camera lens" feature, imitated with sprites on the screen in rain, snow or close to waterfalls:
+
+F596:Sprite. (E) Enable/disable "raindrops on lens" effect with <&> parameters
+
+Note:
+- F596 is also useable in the case of some special setups, like marks of splashing blood "on the lens" etc.
+- See F598 above to fix the missing sprites on static/flyby camera screens.
+
+.....................
+
+Force dripping on Lara - just like when she is coming out of water:
+
+F597:Effect. <&> Start/stop making Lara dripping for a while
+
+Note: F596 makes possible to mix raindrop and drip features.
+
+.....................
+
+You can try what usually is impossible, i.e. execute a trigger during menus or loadscreens (even if it is a specific menu/loadscreen):
+
+F593:TriggerGroup. Perform trigger in menu mode with <&> parameter
+
+As an option, you can also add a keyboard key to that trigger, so the trigger will be executed in that menu/loadscreen only if you hit that key.
+
+Additional features:
+
+- Leveljump loadscreen in F593 can be detected only if you use F592 (see above) as a "Finish" trigger.
+- Backup savegame loadscreen in F593 can be detected only if you use F594, instead of the same trigger of trng.dll F98:
+
+F594: Backup. Restore (load) the <&> backup file in (E) way (for menu mode)
+
+- Triggers drawing things on the screen cannot work in menu mode if they are trng.dll triggers, choose the triggers of the plugin:
+
+a. F591 to print text, see above (even if you don't want to print memory zone fields or new variables),
+b, F595 to show sprites, see above (even if you don't want to change the sprite position in variables), 
+
+"Images" Flipeffect are useless to show images in these situations, without errors. Unfortunately I could not reproduce a similar "Images" trigger to do it without errors. That is why your only chance to show images under menus is still a Customize= CUST_BACKGROUND Script command.
+- On the other hand, the sound and audio flipeffects of trng.dll will work perfectly now.
+
+.....................
+
+The identification of the previous level could be useful if there are different Finish triggers in different levels to load Lara to the current level:
+
+C113: Finish. The previous level ID is <#>
+
+Note:
+It is also useful to check some special cases, eg. if you have come to the title from a level, by the death of Lara etc.
+
+.....................
+
+You can check a few parameters of the actual (chase, look, combat, static, flyby) camera (like room, position etc.):
+
+C112: Camera. The actual camera has <#> parameters
+
+.....................
+
+An alternative version to simply enable/disable triggers with a TRIGGER_TRIGGERER object. This time what you activate/deactivate is not a TRIGGER_TRIGGERER, but a Condition trigger. This is useful if the trigger that you want to enable/disable has a (much) bigger area than one sector, or if it is not a map trigger, but a trigger scripted:
+
+F599: Trigger management. (E) Activate/deactivate condition, signed with <&>
+C111: Trigger management. This condition with <#> sign has already been activated
+
+.....................
+
+If you want something to be activated when a few switches of the same switch type has already been used in the required order:
+
+F600: Lara. (Holds) (E) Establish/remove <&> switch sequence
+F601: Lara. (Holds) Reset <&> switch sequence
+C110: Lara. (Holds) Lara uses the switches of <#> sequence
+
+Note:
+Successfully tested only in LEVER_SWITCH slot for the time being.
+
+.....................
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

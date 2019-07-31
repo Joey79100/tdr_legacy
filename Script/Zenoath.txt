@@ -1,0 +1,9 @@
+Name=			The Zenoath
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
+LoadCamera=		0,0,0,0,0,0,255
+Level=			DATA\ZENOATH,254
+
+LevelFarView=	127
+Fog=			64,32,32
+FogRange=		-2, 127

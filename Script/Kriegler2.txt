@@ -1,0 +1,5 @@
+Name=			Castle Kriegler
+Horizon=		ENABLED
+ColAddHorizon=	ENABLED
+LoadCamera=		0,0,0,0,0,0,255
+Level=			DATA\kriegler2,255

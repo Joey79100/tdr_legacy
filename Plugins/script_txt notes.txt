@@ -1,0 +1,21 @@
+;================================================================================================
+;Notes
+;================================================================================================
+
+;Used Variables:
+
+;Local Short Alfa1
+;Local Short Alfa2
+;Local Short Beta1
+;Local Short Beta2
+;Local Byte Delta1		(Grip Bar)
+;Local Byte Delta2		(Grip Bar)
+;Global Short Alfa2		(Money Value)
+;Global Short Beta1		(Health Bar)
+;Global Short Beta2		(Ammo Counter)
+;Global Byte Alfa1		(Grip Upgrade Amount)
+;Global Byte Alfa2		(Ammo Counter Ammo Type)
+;Global Byte Delta1		(Flashlight Time)
+;Global Byte Delta2		(Flashlight On/Off)
+;Global Byte Delta3		(Grip Meter %)
+;Current Value			(Not continuously)

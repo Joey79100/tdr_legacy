@@ -1,0 +1,5 @@
+Inventory.wad2
+Lara.wad OR Kurtis.wad
+Sprites.wad2
+Emitter.wad2
+[Level].wad/.wad2

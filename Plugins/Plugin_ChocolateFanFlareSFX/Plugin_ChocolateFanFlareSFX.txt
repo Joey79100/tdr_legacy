@@ -1,0 +1,3 @@
+This plugin allows the assignment of sound effects to flares. Then, they will behave as TR2 flares.
+
+Warning: the sound sample assigned must have either L or R flag in Sounds.txt.

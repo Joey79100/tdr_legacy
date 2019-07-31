@@ -1,0 +1,85 @@
+
+;FOG=			24,36,32
+FOG=			20,32,28
+FogRange=		0,28
+;ForceVolumetricFX= DISABLED
+
+Damage=		DMG_INDIRECT_BAR + DMG_SLOW_DISAPPEARING, 120, 10, IGNORE, IGNORE, 10
+
+ColorRGB=		800, 240, 240, 160
+Customize=		CUST_BAR,BAR_DAMAGE, FBAR_DRAW_ALWAYS, 42, 35, 98, 7, 800, 800, IGNORE
+
+GlobalTrigger=		800, IGNORE, GT_CONDITION_GROUP, IGNORE, 800, 801, IGNORE
+TriggerGroup=		800,	$028000, 0, $B3;, >			; Condition:		IF  Lara is on a square with grey frame (to start the mechanical scarab)
+;				$8000, 800, $1F10				; Condition:		OR  Lara is in rooms of MultEnvCondition 800
+TriggerGroup=		801,	$2000, 111, $109				; Restore damage bar	(+7 unit)
+
+;=================================================================================
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 850
+; - more quiet background track
+;---------------------------------------------------------------------------------
+;GlobalTrigger=	800, IGNORE, GT_DAMAGE_BAR_LESS_THAN, 750, IGNORE, 800, 801
+;TriggerGroup=	800, 	$2000, 127, $320				; Enable Organizer 800
+;TriggerGroup=	801, 	$2000, 128, $320				; Disable Organizer 800
+
+;Organizer=		800, FO_TICK_TIME + FO_LOOP, IGNORE, 1, 802
+;TriggerGoup=	802, 
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 850
+; - more quiet background track
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 600
+; - deep oppressing background sound
+; - fog darker
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 500
+; - whispers
+; - occasionnal black blury silhouettes appearing on screen
+; - camera getting slower
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 350
+; - little zoom on Lara
+; - fog darker
+; - slow, soft hearbeat
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 250
+; - fog darker
+; - echoes of noises
+; - more silhouettes with more defined shapes
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 150
+; - little zoom on Lara
+; - fog even darker
+; - very rare little echoes of screams far far away
+; - louder heartbeat
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 150
+; - little zoom on Lara
+; - fog almost black
+; - echoes of screams a bit closer
+; - faster heartbeat
+;---------------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------------
+; DAMAGE LESS THAN 50
+; - bigger zoom on Lara
+; - black fog
+; - louder frequent echoes of screams and whispers
+; - faster and louder heartbeat
+;---------------------------------------------------------------------------------
+
+
