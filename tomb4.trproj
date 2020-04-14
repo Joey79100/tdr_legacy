@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>the-dark-renaissance</Name>
+  <GameVersion>TRNG</GameVersion>
+  <LaunchFilePath>$(ProjectDirectory)\tomb4.exe</LaunchFilePath>
+  <ScriptPath>$(ProjectDirectory)\Script</ScriptPath>
+  <LevelsPath>$(ProjectDirectory)\Maps</LevelsPath>
+  <Levels>
+    <ProjectLevel>
+      <Name>Default</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Default</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Descent</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Descent</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Ghemal</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Ghemal</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Himalayan</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Himalayan</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Kriegler</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Kriegler</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Kriegler2</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Kriegler2</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Title</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Title</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Tutorial</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Tutorial</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Zenoath</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Zenoath</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+    <ProjectLevel>
+      <Name>Valley</Name>
+      <FolderPath>$(ProjectDirectory)\Maps\Valley</FolderPath>
+      <SpecificFile>$(LatestFile)</SpecificFile>
+    </ProjectLevel>
+  </Levels>
+  <InstalledPlugins>
+    <Plugin>
+      <Name>Plugin_AkyVMix01.dll</Name>
+      <InternalDllPath />
+    </Plugin>
+    <Plugin>
+      <Name>Plugin_ChocolateFanFlareSFX.dll</Name>
+      <InternalDllPath />
+    </Plugin>
+    <Plugin>
+      <Name>Plugin_ClassicInventory.dll</Name>
+      <InternalDllPath />
+    </Plugin>
+    <Plugin>
+      <Name>Plugin_Renaissance.dll</Name>
+      <InternalDllPath />
+    </Plugin>
+  </InstalledPlugins>
+</Project>
