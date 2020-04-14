@@ -16,7 +16,6 @@ Maps\Kriegler\backup
 *kriegler.prj2
 Maps\valley\backup
 *valley[0-9]*.prj2
-*valley.prj2
 Maps\Egypt\backup
 *egypt[0-9]*.prj2
 *egypt.prj2
