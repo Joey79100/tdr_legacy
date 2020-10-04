@@ -9,16 +9,15 @@ WARNING: Some wad2 files were made with old Tomb Editor version that had differe
 TERMS OF USE:
 You can take anything you like from this project for as long as you credit the people mentioned above. Also, if you use some existing setup from the game and improve it, then: please share, don't keep it to yourself. Since we shared our setups and assets and it's your basis, it's only fair that you share your version with other people as well.
 
+A simple request - if you are going to encrypt your levels, then please do not use this project.
+We don't agree with encryption for many reasons, but to sum it up: when making your game, you're using software, assets, tutorials, advices, etc... which are all community effort. Community effort is what kept Tomb Raider level editing going after 20 years.
+This project is following the same spirit. If you want to encrypt your levels, well it's your choice, but then we ask you to not use any of our stuff in it unless one of the authors specifically agrees to use his/her assets*. Thank you.
+
+* - By that we mean that if for example MrShina specifically allows you to use her TRAOD Lara (from this project) in your level and encrypt it, then of course you can use it. Remember though that Lara's animations were made by Joey and so they cannot be encrypted.
+
 HOW TO DOWNLOAD:
 The recommended way to download the files is to use a GitHuB Desktop application. You can download it here:
 https://desktop.github.com/
 
 If you can't download the application or any of its alternatives (there are many), you might want to try downloading files through the browser.
 However, it is known that downloading files from the browser tends to change *.WAS and *.SAM files' end of lines from CRLF (Windows format) to LF (Unix format). This does not corrupt the files themselves, but makes it impossible to open them in WADMerger without additional steps. For that you have to open each and every *.was and *.sam file in Notepad++, then go to Edit menu > Convert End of lines > Convert to Windows (CRLF) and save. This is not the recommended way.
-
-READ BEFORE USING, VERY IMPORTANT:
-A simple request - if you are going to encrypt your levels, then please do not use this project.
-
-We don't agree with encryption for many reasons, but to sum it up: when making your game, you're using software, assets, tutorials, advices, etc... which are all community effort. Community effort is what kept Tomb Raider level editing going after 20 years.
-
-This project is following the same spirit. If you want to encrypt your levels, well it's your choice, but then  ask you to not use any of my stuff in it. Thank you.
