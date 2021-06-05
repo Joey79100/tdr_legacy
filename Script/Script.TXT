@@ -134,6 +134,8 @@ WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Inventory.txt"
 #INCLUDE 		"Animations_Lara.txt"
 
+#INCLUDE 		"Darkness.txt"
+
 [Level]			;DREAD PALACE GHEMAL
 WindowTitle=	Tomb Raider: The Dark Renaissance
 #INCLUDE 		"Ghemal.txt"
